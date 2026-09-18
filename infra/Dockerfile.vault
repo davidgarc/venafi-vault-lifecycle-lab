@@ -1,0 +1,8 @@
+FROM golang:1.25.7-alpine@sha256:f6751d823c26342f9506c03797d2527668d095b0a15f1862cddb4d927a7a4ced AS build
+RUN apk add --no-cache git
+WORKDIR /src
+ARG PLUGIN_COMMIT=1d98f04e22549fb7307908c3140fa359b4dd0d15
+RUN git init . && git remote add origin https://github.com/Venafi/vault-pki-backend-venafi.git && git fetch --depth 1 origin "$PLUGIN_COMMIT" && git checkout --detach FETCH_HEAD
+RUN --mount=type=cache,target=/go/pkg/mod --mount=type=cache,target=/root/.cache/go-build CGO_ENABLED=0 go build -trimpath -o /venafi-pki-backend .
+FROM hashicorp/vault:1.21.4@sha256:4e33b126a59c0c333b76fb4e894722462659a6bec7c48c9ee8cea56fccfd2569
+COPY --from=build /venafi-pki-backend /vault/plugins/venafi-pki-backend

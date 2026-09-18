@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "assertion": "reuse",
+  "scope": "observed pod certificate and public-key identity only; upstream counters must be compared separately",
+  "pod_uid": "2cd31895-604a-4c19-943c-c9d65d83e245",
+  "restart_count_before": 0,
+  "restart_count_after": 1,
+  "container_id_before": "containerd://fd293c0a758388ed0565b0af2b4d09e162599aed1580cce7e5d67288ff00a905",
+  "container_id_after": "containerd://a35165dd470900abed7d60dbe8c5e8be3dc20bc6a8e51992d0f33cf9fa3c169c"
+}

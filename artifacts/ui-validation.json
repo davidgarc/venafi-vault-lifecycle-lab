@@ -1,0 +1,16 @@
+{
+  "browser": "Codex in-app browser",
+  "pages": [
+    "combined dashboard",
+    "Agent application"
+  ],
+  "checks": {
+    "certificate_metadata_visible": true,
+    "no_browser_console_errors": true,
+    "scale_to_three_accepted": true,
+    "untrusted_control_post_rejected_403": true,
+    "mock_pause_resume_accepted": true,
+    "outage_metrics_report_unknown_not_zero": true
+  },
+  "note": "During sustained resilience outage the live DOM showed Mock unavailable; counters are unknown and em dashes for counters. Screenshot saved as mock-outage-dashboard.jpg."
+}

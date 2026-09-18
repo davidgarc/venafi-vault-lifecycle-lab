@@ -2,7 +2,7 @@
 
 ## Objective and current evidence
 
-Implement two independently runnable, browser-demonstrable experiments using HashiCorp Vault and the unmodified Venafi PKI plugin. This document is a plan, not a report of successful runtime validation.
+Implement two independently runnable, browser-demonstrable experiments using HashiCorp Vault and the unmodified Venafi PKI plugin. Implementation is complete. This document preserves the design and acceptance criteria; [RESULTS.md](RESULTS.md) records actual runtime outcomes, including the native Agent renewal failure.
 
 Local verification: Docker is available on ARM64 with 10 CPUs and approximately 16 GB RAM. docker, kind, kubectl, helm, and gh are installed. An existing kind cluster named `kind` must be left untouched. GitHub authentication resolves to `davidgarc`, a personal account rather than an organization; use that explicitly requested namespace.
 

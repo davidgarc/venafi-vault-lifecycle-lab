@@ -1,0 +1,565 @@
+{
+  "observed_at": 1789698587.5652092,
+  "state": {
+    "observed_at": 1789698582.40054,
+    "experiments": {
+      "cm": {
+        "experiment": "cm",
+        "observed_at": 1789698582.3988056,
+        "pods": [
+          {
+            "name": "demo-7d4d5f8d95-2jj8h",
+            "uid": "e8b4b6cf-7ced-4945-bc3e-44881e8ebc23",
+            "phase": "Running",
+            "restarts": 0,
+            "certificate": {
+              "ready": true,
+              "serial": "59FB899017D048923BAD1C5B74E723B308173FF1",
+              "subject": "CN=demo.cm.test",
+              "issuer": "CN=Lifecycle Lab Mock TPP CA",
+              "sans": "DNS:demo.cm.test",
+              "fingerprint_sha256": "81:D5:1A:7A:62:63:86:90:41:93:DE:6A:D3:5E:6E:75:C7:70:5B:09:08:A9:DD:D8:CC:05:24:B9:47:C1:11:5F",
+              "public_key_sha256": "ca1004fc15e3313b114e385d298804a23b415173559f93d9fb823057e77024cf",
+              "pod_name": "demo-7d4d5f8d95-2jj8h",
+              "experiment": "cert-manager",
+              "storage": "Kubernetes TLS Secret / demo-tls",
+              "requested_duration_seconds": 3600,
+              "actual_duration_seconds": 720,
+              "not_before": 1789698376,
+              "not_after": 1789699096,
+              "midpoint": 1789698736,
+              "remaining_seconds": 514,
+              "observed_at": 1789698582,
+              "valid": true
+            }
+          },
+          {
+            "name": "demo-7d4d5f8d95-bdjzh",
+            "uid": "da9396b1-f49f-44bc-811a-ddab34a239c2",
+            "phase": "Running",
+            "restarts": 0,
+            "certificate": {
+              "ready": true,
+              "serial": "59FB899017D048923BAD1C5B74E723B308173FF1",
+              "subject": "CN=demo.cm.test",
+              "issuer": "CN=Lifecycle Lab Mock TPP CA",
+              "sans": "DNS:demo.cm.test",
+              "fingerprint_sha256": "81:D5:1A:7A:62:63:86:90:41:93:DE:6A:D3:5E:6E:75:C7:70:5B:09:08:A9:DD:D8:CC:05:24:B9:47:C1:11:5F",
+              "public_key_sha256": "ca1004fc15e3313b114e385d298804a23b415173559f93d9fb823057e77024cf",
+              "pod_name": "demo-7d4d5f8d95-bdjzh",
+              "experiment": "cert-manager",
+              "storage": "Kubernetes TLS Secret / demo-tls",
+              "requested_duration_seconds": 3600,
+              "actual_duration_seconds": 720,
+              "not_before": 1789698376,
+              "not_after": 1789699096,
+              "midpoint": 1789698736,
+              "remaining_seconds": 514,
+              "observed_at": 1789698582,
+              "valid": true
+            }
+          },
+          {
+            "name": "demo-7d4d5f8d95-svw7q",
+            "uid": "2cd31895-604a-4c19-943c-c9d65d83e245",
+            "phase": "Running",
+            "restarts": 1,
+            "certificate": {
+              "ready": true,
+              "serial": "59FB899017D048923BAD1C5B74E723B308173FF1",
+              "subject": "CN=demo.cm.test",
+              "issuer": "CN=Lifecycle Lab Mock TPP CA",
+              "sans": "DNS:demo.cm.test",
+              "fingerprint_sha256": "81:D5:1A:7A:62:63:86:90:41:93:DE:6A:D3:5E:6E:75:C7:70:5B:09:08:A9:DD:D8:CC:05:24:B9:47:C1:11:5F",
+              "public_key_sha256": "ca1004fc15e3313b114e385d298804a23b415173559f93d9fb823057e77024cf",
+              "pod_name": "demo-7d4d5f8d95-svw7q",
+              "experiment": "cert-manager",
+              "storage": "Kubernetes TLS Secret / demo-tls",
+              "requested_duration_seconds": 3600,
+              "actual_duration_seconds": 720,
+              "not_before": 1789698376,
+              "not_after": 1789699096,
+              "midpoint": 1789698736,
+              "remaining_seconds": 514,
+              "observed_at": 1789698582,
+              "valid": true
+            }
+          }
+        ],
+        "secrets": [
+          {
+            "name": "demo-tls",
+            "type": "kubernetes.io/tls",
+            "fields": [
+              "ca.crt",
+              "tls.crt",
+              "tls.key"
+            ]
+          }
+        ],
+        "certificates": [
+          {
+            "name": "demo-tls",
+            "status": {
+              "conditions": [
+                {
+                  "lastTransitionTime": "2026-09-18T02:14:16Z",
+                  "message": "Certificate is up to date and has not expired",
+                  "observedGeneration": 1,
+                  "reason": "Ready",
+                  "status": "True",
+                  "type": "Ready"
+                }
+              ],
+              "notAfter": "2026-09-18T02:38:16Z",
+              "notBefore": "2026-09-18T02:26:16Z",
+              "renewalTime": "2026-09-18T02:32:16Z",
+              "revision": 3
+            }
+          }
+        ]
+      },
+      "agent": {
+        "experiment": "agent",
+        "observed_at": 1789698582.3990176,
+        "pods": [
+          {
+            "name": "demo-c777bbf64-645l4",
+            "uid": "a3c7e09a-05f3-492e-bf35-145018a4788e",
+            "phase": "Running",
+            "restarts": 1,
+            "certificate": {
+              "ready": true,
+              "serial": "2150F1A78E81F8703BCDD2499B18B45BA179A3D5",
+              "subject": "CN=demo.agent.test",
+              "issuer": "CN=Lifecycle Lab Mock TPP CA",
+              "sans": "DNS:demo.agent.test",
+              "fingerprint_sha256": "A8:13:D5:65:D4:0F:09:A9:CF:5A:BF:56:A8:0C:56:8C:D0:10:47:BE:BD:A4:A8:6D:32:2B:75:87:85:D5:EE:B5",
+              "public_key_sha256": "866df018cda8bb9640b5a6621870ee29481dde414597c9263bf24c3063518546",
+              "pod_name": "demo-c777bbf64-645l4",
+              "experiment": "agent",
+              "storage": "Agent memory emptyDir; durable identity in Vault plugin storage",
+              "requested_duration_seconds": 3600,
+              "actual_duration_seconds": 720,
+              "not_before": 1789698082,
+              "not_after": 1789698802,
+              "midpoint": 1789698442,
+              "remaining_seconds": 219,
+              "observed_at": 1789698583,
+              "valid": true
+            }
+          },
+          {
+            "name": "demo-c777bbf64-blmt8",
+            "uid": "b79e8f45-7326-433b-95a4-0e03f8f43891",
+            "phase": "Running",
+            "restarts": 0,
+            "certificate": {
+              "ready": true,
+              "serial": "37D52D7B881D2B10913CB4113A3A9191265FEA4B",
+              "subject": "CN=demo.agent.test",
+              "issuer": "CN=Lifecycle Lab Mock TPP CA",
+              "sans": "DNS:demo.agent.test",
+              "fingerprint_sha256": "5C:1F:F4:54:0D:3B:8B:40:1D:8F:15:73:7D:82:8E:10:72:14:F4:E4:19:F3:62:0A:65:7F:CD:95:D6:9C:E5:07",
+              "public_key_sha256": "b819bf2c469faeb55bbd3ddbdd59c57c260d866313ddd1db19edca64ae21540c",
+              "pod_name": "demo-c777bbf64-blmt8",
+              "experiment": "agent",
+              "storage": "Agent memory emptyDir; durable identity in Vault plugin storage",
+              "requested_duration_seconds": 3600,
+              "actual_duration_seconds": 720,
+              "not_before": 1789698442,
+              "not_after": 1789699162,
+              "midpoint": 1789698802,
+              "remaining_seconds": 576,
+              "observed_at": 1789698586,
+              "valid": true
+            }
+          },
+          {
+            "name": "demo-c777bbf64-zfxsc",
+            "uid": "d7a5f7b4-9320-4546-a917-0fca841c471e",
+            "phase": "Running",
+            "restarts": 0,
+            "certificate": {
+              "ready": true,
+              "serial": "37D52D7B881D2B10913CB4113A3A9191265FEA4B",
+              "subject": "CN=demo.agent.test",
+              "issuer": "CN=Lifecycle Lab Mock TPP CA",
+              "sans": "DNS:demo.agent.test",
+              "fingerprint_sha256": "5C:1F:F4:54:0D:3B:8B:40:1D:8F:15:73:7D:82:8E:10:72:14:F4:E4:19:F3:62:0A:65:7F:CD:95:D6:9C:E5:07",
+              "public_key_sha256": "b819bf2c469faeb55bbd3ddbdd59c57c260d866313ddd1db19edca64ae21540c",
+              "pod_name": "demo-c777bbf64-zfxsc",
+              "experiment": "agent",
+              "storage": "Agent memory emptyDir; durable identity in Vault plugin storage",
+              "requested_duration_seconds": 3600,
+              "actual_duration_seconds": 720,
+              "not_before": 1789698442,
+              "not_after": 1789699162,
+              "midpoint": 1789698802,
+              "remaining_seconds": 575,
+              "observed_at": 1789698587,
+              "valid": true
+            }
+          }
+        ],
+        "secrets": []
+      }
+    },
+    "mock": {
+      "mode": "TPP API contract simulator",
+      "actual_lifetime_seconds": 720,
+      "counters": {
+        "exp1": {
+          "issuance": 3,
+          "retrieval": 3,
+          "auth": 3,
+          "policy": 3
+        },
+        "exp2": {
+          "issuance": 3,
+          "retrieval": 3,
+          "auth": 18,
+          "policy": 3
+        }
+      },
+      "events": [
+        {
+          "time": "2026-09-18T02:14:16.904532+00:00",
+          "operation": "auth",
+          "experiment": "exp1"
+        },
+        {
+          "time": "2026-09-18T02:14:16.908021+00:00",
+          "operation": "policy",
+          "experiment": "exp1"
+        },
+        {
+          "time": "2026-09-18T02:14:16.912790+00:00",
+          "operation": "issuance",
+          "experiment": "exp1",
+          "certificate_dn": "\\VED\\Policy\\cm\\61626d8ee81c1b1ac68e81209b9173e6f1d75fc9",
+          "common_name": "demo.cm.test",
+          "serial": "61626d8ee81c1b1ac68e81209b9173e6f1d75fc9"
+        },
+        {
+          "time": "2026-09-18T02:14:16.918985+00:00",
+          "operation": "retrieval",
+          "experiment": "exp1",
+          "certificate_dn": "\\VED\\Policy\\cm\\61626d8ee81c1b1ac68e81209b9173e6f1d75fc9",
+          "serial": "61626d8ee81c1b1ac68e81209b9173e6f1d75fc9"
+        },
+        {
+          "time": "2026-09-18T02:15:22.643312+00:00",
+          "operation": "auth",
+          "experiment": "exp2"
+        },
+        {
+          "time": "2026-09-18T02:15:22.647265+00:00",
+          "operation": "policy",
+          "experiment": "exp2"
+        },
+        {
+          "time": "2026-09-18T02:15:22.733839+00:00",
+          "operation": "issuance",
+          "experiment": "exp2",
+          "certificate_dn": "\\VED\\Policy\\agent\\5db7b11c47678f4848915d7ecabbe8bc4f58c8b0",
+          "common_name": "demo.agent.test",
+          "serial": "5db7b11c47678f4848915d7ecabbe8bc4f58c8b0"
+        },
+        {
+          "time": "2026-09-18T02:15:22.740358+00:00",
+          "operation": "retrieval",
+          "experiment": "exp2",
+          "certificate_dn": "\\VED\\Policy\\agent\\5db7b11c47678f4848915d7ecabbe8bc4f58c8b0",
+          "serial": "5db7b11c47678f4848915d7ecabbe8bc4f58c8b0"
+        },
+        {
+          "time": "2026-09-18T02:15:23.083850+00:00",
+          "operation": "auth",
+          "experiment": "exp2"
+        },
+        {
+          "time": "2026-09-18T02:15:23.493107+00:00",
+          "operation": "auth",
+          "experiment": "exp2"
+        },
+        {
+          "time": "2026-09-18T02:16:04.211512+00:00",
+          "operation": "auth",
+          "experiment": "exp2"
+        },
+        {
+          "time": "2026-09-18T02:16:07.769663+00:00",
+          "operation": "auth",
+          "experiment": "exp2"
+        },
+        {
+          "time": "2026-09-18T02:16:10.769179+00:00",
+          "operation": "auth",
+          "experiment": "exp2"
+        },
+        {
+          "time": "2026-09-18T02:17:42.070463+00:00",
+          "operation": "auth",
+          "experiment": "exp2"
+        },
+        {
+          "time": "2026-09-18T02:17:42.103107+00:00",
+          "operation": "auth",
+          "experiment": "exp2"
+        },
+        {
+          "time": "2026-09-18T02:17:42.112255+00:00",
+          "operation": "auth",
+          "experiment": "exp2"
+        },
+        {
+          "time": "2026-09-18T02:17:54.360449+00:00",
+          "operation": "auth",
+          "experiment": "exp2"
+        },
+        {
+          "time": "2026-09-18T02:17:57.034890+00:00",
+          "operation": "auth",
+          "experiment": "exp2"
+        },
+        {
+          "time": "2026-09-18T02:18:00.166659+00:00",
+          "operation": "auth",
+          "experiment": "exp2"
+        },
+        {
+          "time": "2026-09-18T02:20:16.113480+00:00",
+          "operation": "auth",
+          "experiment": "exp1"
+        },
+        {
+          "time": "2026-09-18T02:20:16.116382+00:00",
+          "operation": "policy",
+          "experiment": "exp1"
+        },
+        {
+          "time": "2026-09-18T02:20:16.119734+00:00",
+          "operation": "issuance",
+          "experiment": "exp1",
+          "certificate_dn": "\\VED\\Policy\\cm\\286da8857299a2e8bd73d61d052498ff9e9981c1",
+          "common_name": "demo.cm.test",
+          "serial": "286da8857299a2e8bd73d61d052498ff9e9981c1"
+        },
+        {
+          "time": "2026-09-18T02:20:16.124781+00:00",
+          "operation": "retrieval",
+          "experiment": "exp1",
+          "certificate_dn": "\\VED\\Policy\\cm\\286da8857299a2e8bd73d61d052498ff9e9981c1",
+          "serial": "286da8857299a2e8bd73d61d052498ff9e9981c1"
+        },
+        {
+          "time": "2026-09-18T02:21:22.007319+00:00",
+          "operation": "auth",
+          "experiment": "exp2"
+        },
+        {
+          "time": "2026-09-18T02:21:22.009164+00:00",
+          "operation": "auth",
+          "experiment": "exp2"
+        },
+        {
+          "time": "2026-09-18T02:21:22.010997+00:00",
+          "operation": "auth",
+          "experiment": "exp2"
+        },
+        {
+          "time": "2026-09-18T02:21:22.012762+00:00",
+          "operation": "policy",
+          "experiment": "exp2"
+        },
+        {
+          "time": "2026-09-18T02:21:22.075451+00:00",
+          "operation": "issuance",
+          "experiment": "exp2",
+          "certificate_dn": "\\VED\\Policy\\agent\\2150f1a78e81f8703bcdd2499b18b45ba179a3d5",
+          "common_name": "demo.agent.test",
+          "serial": "2150f1a78e81f8703bcdd2499b18b45ba179a3d5"
+        },
+        {
+          "time": "2026-09-18T02:21:22.080661+00:00",
+          "operation": "retrieval",
+          "experiment": "exp2",
+          "certificate_dn": "\\VED\\Policy\\agent\\2150f1a78e81f8703bcdd2499b18b45ba179a3d5",
+          "serial": "2150f1a78e81f8703bcdd2499b18b45ba179a3d5"
+        },
+        {
+          "time": "2026-09-18T02:26:16.079501+00:00",
+          "operation": "auth",
+          "experiment": "exp1"
+        },
+        {
+          "time": "2026-09-18T02:26:16.082744+00:00",
+          "operation": "policy",
+          "experiment": "exp1"
+        },
+        {
+          "time": "2026-09-18T02:26:16.086279+00:00",
+          "operation": "issuance",
+          "experiment": "exp1",
+          "certificate_dn": "\\VED\\Policy\\cm\\59fb899017d048923bad1c5b74e723b308173ff1",
+          "common_name": "demo.cm.test",
+          "serial": "59fb899017d048923bad1c5b74e723b308173ff1"
+        },
+        {
+          "time": "2026-09-18T02:26:16.090590+00:00",
+          "operation": "retrieval",
+          "experiment": "exp1",
+          "certificate_dn": "\\VED\\Policy\\cm\\59fb899017d048923bad1c5b74e723b308173ff1",
+          "serial": "59fb899017d048923bad1c5b74e723b308173ff1"
+        },
+        {
+          "time": "2026-09-18T02:27:22.005677+00:00",
+          "operation": "auth",
+          "experiment": "exp2"
+        },
+        {
+          "time": "2026-09-18T02:27:22.007075+00:00",
+          "operation": "auth",
+          "experiment": "exp2"
+        },
+        {
+          "time": "2026-09-18T02:27:22.009205+00:00",
+          "operation": "auth",
+          "experiment": "exp2"
+        },
+        {
+          "time": "2026-09-18T02:27:22.010891+00:00",
+          "operation": "policy",
+          "experiment": "exp2"
+        },
+        {
+          "time": "2026-09-18T02:27:22.068249+00:00",
+          "operation": "issuance",
+          "experiment": "exp2",
+          "certificate_dn": "\\VED\\Policy\\agent\\37d52d7b881d2b10913cb4113a3a9191265fea4b",
+          "common_name": "demo.agent.test",
+          "serial": "37d52d7b881d2b10913cb4113a3a9191265fea4b"
+        },
+        {
+          "time": "2026-09-18T02:27:22.073902+00:00",
+          "operation": "retrieval",
+          "experiment": "exp2",
+          "certificate_dn": "\\VED\\Policy\\agent\\37d52d7b881d2b10913cb4113a3a9191265fea4b",
+          "serial": "37d52d7b881d2b10913cb4113a3a9191265fea4b"
+        }
+      ],
+      "certificates": [
+        {
+          "experiment": "exp1",
+          "common_name": "demo.cm.test",
+          "serial": "61626d8ee81c1b1ac68e81209b9173e6f1d75fc9",
+          "not_before": "2026-09-18T02:14:16+00:00",
+          "not_after": "2026-09-18T02:26:16+00:00",
+          "requested_ca_attributes": [
+            {
+              "Name": "Origin",
+              "Value": "HashiCorp Vault"
+            },
+            {
+              "Name": "Specific End Date",
+              "Value": "2026-09-18T03:14:16Z"
+            }
+          ],
+          "certificate_dn": "\\VED\\Policy\\cm\\61626d8ee81c1b1ac68e81209b9173e6f1d75fc9"
+        },
+        {
+          "experiment": "exp2",
+          "common_name": "demo.agent.test",
+          "serial": "5db7b11c47678f4848915d7ecabbe8bc4f58c8b0",
+          "not_before": "2026-09-18T02:15:22+00:00",
+          "not_after": "2026-09-18T02:27:22+00:00",
+          "requested_ca_attributes": [
+            {
+              "Name": "Origin",
+              "Value": "HashiCorp Vault"
+            },
+            {
+              "Name": "Specific End Date",
+              "Value": "2026-09-18T03:15:22Z"
+            }
+          ],
+          "certificate_dn": "\\VED\\Policy\\agent\\5db7b11c47678f4848915d7ecabbe8bc4f58c8b0"
+        },
+        {
+          "experiment": "exp1",
+          "common_name": "demo.cm.test",
+          "serial": "286da8857299a2e8bd73d61d052498ff9e9981c1",
+          "not_before": "2026-09-18T02:20:16+00:00",
+          "not_after": "2026-09-18T02:32:16+00:00",
+          "requested_ca_attributes": [
+            {
+              "Name": "Origin",
+              "Value": "HashiCorp Vault"
+            },
+            {
+              "Name": "Specific End Date",
+              "Value": "2026-09-18T03:20:16Z"
+            }
+          ],
+          "certificate_dn": "\\VED\\Policy\\cm\\286da8857299a2e8bd73d61d052498ff9e9981c1"
+        },
+        {
+          "experiment": "exp2",
+          "common_name": "demo.agent.test",
+          "serial": "2150f1a78e81f8703bcdd2499b18b45ba179a3d5",
+          "not_before": "2026-09-18T02:21:22+00:00",
+          "not_after": "2026-09-18T02:33:22+00:00",
+          "requested_ca_attributes": [
+            {
+              "Name": "Origin",
+              "Value": "HashiCorp Vault"
+            },
+            {
+              "Name": "Specific End Date",
+              "Value": "2026-09-18T03:21:22Z"
+            }
+          ],
+          "certificate_dn": "\\VED\\Policy\\agent\\2150f1a78e81f8703bcdd2499b18b45ba179a3d5"
+        },
+        {
+          "experiment": "exp1",
+          "common_name": "demo.cm.test",
+          "serial": "59fb899017d048923bad1c5b74e723b308173ff1",
+          "not_before": "2026-09-18T02:26:16+00:00",
+          "not_after": "2026-09-18T02:38:16+00:00",
+          "requested_ca_attributes": [
+            {
+              "Name": "Origin",
+              "Value": "HashiCorp Vault"
+            },
+            {
+              "Name": "Specific End Date",
+              "Value": "2026-09-18T03:26:16Z"
+            }
+          ],
+          "certificate_dn": "\\VED\\Policy\\cm\\59fb899017d048923bad1c5b74e723b308173ff1"
+        },
+        {
+          "experiment": "exp2",
+          "common_name": "demo.agent.test",
+          "serial": "37d52d7b881d2b10913cb4113a3a9191265fea4b",
+          "not_before": "2026-09-18T02:27:22+00:00",
+          "not_after": "2026-09-18T02:39:22+00:00",
+          "requested_ca_attributes": [
+            {
+              "Name": "Origin",
+              "Value": "HashiCorp Vault"
+            },
+            {
+              "Name": "Specific End Date",
+              "Value": "2026-09-18T03:27:22Z"
+            }
+          ],
+          "certificate_dn": "\\VED\\Policy\\agent\\37d52d7b881d2b10913cb4113a3a9191265fea4b"
+        }
+      ]
+    }
+  },
+  "finding": "One Agent replica retained the previous certificate more than 120 seconds after native midpoint issuance; no recovery action taken before this capture."
+}

@@ -1,0 +1,33 @@
+#!/bin/sh
+set -eu
+export LC_ALL=C
+cert_file=${CERT_FILE:-/certs/tls.crt}
+# Extract only the first PUBLIC certificate. The input can be Agent's combined
+# certificate/private-key bundle; private-key blocks are never copied or served.
+certificate=$(openssl x509 -in "$cert_file" -outform PEM 2>/dev/null) || {
+  printf 'Status: 503 Service Unavailable\r\nContent-Type: application/json\r\nCache-Control: no-store\r\n\r\n{"ready":false,"error":"certificate unavailable"}\n'
+  exit 0
+}
+x509() { printf '%s\n' "$certificate" | openssl x509 -noout "$@"; }
+serial=$(x509 -serial | cut -d= -f2-)
+subject=$(x509 -subject -nameopt RFC2253 | sed 's/^subject=//')
+issuer=$(x509 -issuer -nameopt RFC2253 | sed 's/^issuer=//')
+sans=$(x509 -ext subjectAltName 2>/dev/null | tail -n +2 | xargs || true)
+fingerprint=$(x509 -fingerprint -sha256 | cut -d= -f2-)
+public_key_sha256=$(x509 -pubkey | openssl pkey -pubin -outform DER 2>/dev/null | sha256sum | cut -d' ' -f1)
+not_before=$(date -u -d "$(x509 -startdate | cut -d= -f2-)" +%s)
+not_after=$(date -u -d "$(x509 -enddate | cut -d= -f2-)" +%s)
+now=$(date -u +%s)
+printf 'Content-Type: application/json\r\nCache-Control: no-store\r\nX-Content-Type-Options: nosniff\r\n\r\n'
+jq -n --arg serial "$serial" --arg subject "$subject" --arg issuer "$issuer" \
+  --arg sans "$sans" --arg fingerprint_sha256 "$fingerprint" \
+  --arg public_key_sha256 "$public_key_sha256" --arg pod_name "${POD_NAME:-${HOSTNAME:-unknown}}" \
+  --arg experiment "${EXPERIMENT:-unknown}" --arg storage "${CERT_STORAGE:-unknown}" \
+  --argjson not_before "$not_before" --argjson not_after "$not_after" --argjson observed_at "$now" \
+  '{ready:true,serial:$serial,subject:$subject,issuer:$issuer,sans:$sans,
+    fingerprint_sha256:$fingerprint_sha256,public_key_sha256:$public_key_sha256,
+    pod_name:$pod_name,experiment:$experiment,storage:$storage,
+    requested_duration_seconds:3600,actual_duration_seconds:($not_after-$not_before),
+    not_before:$not_before,not_after:$not_after,midpoint:(($not_before+$not_after)/2),
+    remaining_seconds:($not_after-$observed_at),observed_at:$observed_at,
+    valid:($observed_at >= $not_before and $observed_at < $not_after)}'

@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "experiment": "exp1",
+  "before": {
+    "issuance": 1,
+    "retrieval": 1,
+    "auth": 1,
+    "policy": 1
+  },
+  "after": {
+    "issuance": 1,
+    "retrieval": 1,
+    "auth": 1,
+    "policy": 1
+  },
+  "delta": {
+    "policy": 0,
+    "issuance": 0,
+    "retrieval": 0,
+    "auth": 0
+  },
+  "scenarios": [
+    "whole-pod replacement",
+    "three replicas",
+    "container-only restart"
+  ]
+}

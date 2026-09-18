@@ -1,0 +1,280 @@
+{
+  "started_at": "2026-09-18T02:46:05.763695+00:00",
+  "checks": {
+    "partial_shutdown_preserves_vault": true,
+    "partial_shutdown_preserves_agent": true,
+    "first_shutdown_no_lab_containers": true,
+    "first_shutdown_credentials_removed": true,
+    "first_shutdown_ports_closed": true,
+    "first_shutdown_existing_kind_preserved": true,
+    "first_shutdown_default_kubeconfig_preserved": true,
+    "fresh_cm_ready": true,
+    "fresh_agent_ready": true,
+    "fresh_vault_container": true,
+    "final_shutdown_no_lab_containers": true,
+    "final_shutdown_credentials_removed": true,
+    "final_shutdown_ports_closed": true,
+    "final_shutdown_existing_kind_preserved": true,
+    "final_shutdown_default_kubeconfig_preserved": true
+  },
+  "containers_before": {
+    "venafi-lab-ui": "e2c05914e4601843c7491c9641558c5c6796d675bb8b36b6fd90ed9e42b2fb00",
+    "venafi-lab-agent-control-plane": "0bb9061d2b4c922059f61f8e8dbc76ee15121cf19ebaa3da23651357d9529611",
+    "venafi-lab-cm-control-plane": "cf0ef900741c439bbc1634932cebb9630427c5ed9828523e97a5e1cb66fb6cb3",
+    "venafi-lab-vault-control-plane": "7a8b96717c6209a6d8852bf48d98c3463f110f83f2103174827d3b610c9fa8ac",
+    "kind-control-plane": "6e3a95263b4d74e7e3ba1db67dde27aa38473432be3177bc01aa31d65985923a",
+    "kind-registry": "e32466f79c80c826f8c323a78f67a574b4ddee0a4e662732003bd5f393248d67"
+  },
+  "partial_shutdown_agent_certificate": {
+    "ready": true,
+    "serial": "188E42F81E84C1DABEBFD468D81F37297E5AD8D3",
+    "subject": "CN=demo.agent.test",
+    "issuer": "CN=Lifecycle Lab Mock TPP CA",
+    "sans": "DNS:demo.agent.test",
+    "fingerprint_sha256": "FB:21:E6:35:7F:70:A9:6B:F0:3D:CE:F4:C2:C9:C8:12:C2:8C:42:2C:1C:6C:65:3D:85:3F:A9:3F:EC:F9:A9:0B",
+    "public_key_sha256": "62ee17b88d93320d0e40388cdfc46bce7a2bf3149de5b324c6cbf77bc353003e",
+    "pod_name": "demo-c777bbf64-vpx7m",
+    "experiment": "agent",
+    "storage": "Agent memory emptyDir; durable identity in Vault plugin storage",
+    "requested_duration_seconds": 3600,
+    "actual_duration_seconds": 720,
+    "not_before": 1789699537,
+    "not_after": 1789700257,
+    "midpoint": 1789699897,
+    "remaining_seconds": 689,
+    "observed_at": 1789699568,
+    "valid": true
+  },
+  "first_shutdown_ports_closed": {
+    "18080": true,
+    "18081": true,
+    "18082": true,
+    "18200": true,
+    "18201": true
+  },
+  "fresh_start": {
+    "observed_at": 1789699700.2878914,
+    "experiments": {
+      "cm": {
+        "experiment": "cm",
+        "observed_at": 1789699700.263003,
+        "desired_replicas": 1,
+        "pods": [
+          {
+            "name": "demo-6946998899-msppf",
+            "uid": "105e2725-8f3a-467e-b5d2-0ffa9ba545ff",
+            "phase": "Running",
+            "restarts": 0,
+            "certificate": {
+              "ready": true,
+              "serial": "51BDBDACE0736251288D3AA2E5B6C5686F2C9E9E",
+              "subject": "CN=demo.cm.test",
+              "issuer": "CN=Lifecycle Lab Mock TPP CA",
+              "sans": "DNS:demo.cm.test",
+              "fingerprint_sha256": "61:6B:3E:5B:CA:26:8F:FA:6D:2C:86:51:FB:5B:AF:49:C7:97:52:A3:44:CD:BF:60:C5:6B:29:2C:90:A3:8F:7C",
+              "public_key_sha256": "fd52524147187db0bca7b0473cd0bda2f294dfbd72c5b7dbaf07f3d60a9ff806",
+              "pod_name": "demo-6946998899-msppf",
+              "experiment": "cert-manager",
+              "storage": "Kubernetes TLS Secret / demo-tls",
+              "requested_duration_seconds": 3600,
+              "actual_duration_seconds": 720,
+              "not_before": 1789699696,
+              "not_after": 1789700416,
+              "midpoint": 1789700056,
+              "remaining_seconds": 716,
+              "observed_at": 1789699700,
+              "valid": true
+            }
+          }
+        ],
+        "secrets": [
+          {
+            "name": "demo-tls",
+            "type": "kubernetes.io/tls",
+            "fields": [
+              "ca.crt",
+              "tls.crt",
+              "tls.key"
+            ]
+          }
+        ],
+        "certificates": [
+          {
+            "name": "demo-tls",
+            "status": {
+              "conditions": [
+                {
+                  "lastTransitionTime": "2026-09-18T02:48:16Z",
+                  "message": "Certificate is up to date and has not expired",
+                  "observedGeneration": 1,
+                  "reason": "Ready",
+                  "status": "True",
+                  "type": "Ready"
+                }
+              ],
+              "notAfter": "2026-09-18T03:00:16Z",
+              "notBefore": "2026-09-18T02:48:16Z",
+              "renewalTime": "2026-09-18T02:54:16Z",
+              "revision": 1
+            }
+          }
+        ]
+      },
+      "agent": {
+        "experiment": "agent",
+        "observed_at": 1789699700.2636163,
+        "desired_replicas": 1,
+        "pods": [
+          {
+            "name": "demo-59ff75679b-rfrxf",
+            "uid": "bc846265-7d3e-4872-8630-082c9c624b1a",
+            "phase": "Running",
+            "restarts": 0,
+            "certificate": {
+              "ready": true,
+              "serial": "1735F26CB9AAF27A1A2D4FB0C5EE4ECF3371B304",
+              "subject": "CN=demo.agent.test",
+              "issuer": "CN=Lifecycle Lab Mock TPP CA",
+              "sans": "DNS:demo.agent.test",
+              "fingerprint_sha256": "B1:D4:40:1A:B8:3B:99:04:49:F7:A3:30:F4:C4:CB:55:25:5A:A3:AB:88:2D:7E:FE:1D:46:DE:1B:5B:15:CD:36",
+              "public_key_sha256": "8a5de395bbcdb6a83cc1f89541432232616842bc62b983e385a724f0d72a6e16",
+              "pod_name": "demo-59ff75679b-rfrxf",
+              "experiment": "agent",
+              "storage": "Agent memory emptyDir; durable identity in Vault plugin storage",
+              "requested_duration_seconds": 3600,
+              "actual_duration_seconds": 720,
+              "not_before": 1789699693,
+              "not_after": 1789700413,
+              "midpoint": 1789700053,
+              "remaining_seconds": 712,
+              "observed_at": 1789699701,
+              "valid": true
+            }
+          }
+        ],
+        "secrets": []
+      }
+    },
+    "mock": {
+      "mode": "TPP API contract simulator",
+      "actual_lifetime_seconds": 720,
+      "counters": {
+        "exp2": {
+          "issuance": 1,
+          "retrieval": 1,
+          "auth": 1,
+          "policy": 1
+        },
+        "exp1": {
+          "issuance": 1,
+          "retrieval": 1,
+          "auth": 1,
+          "policy": 1
+        }
+      },
+      "events": [
+        {
+          "time": "2026-09-18T02:48:13.762662+00:00",
+          "operation": "auth",
+          "experiment": "exp2"
+        },
+        {
+          "time": "2026-09-18T02:48:13.766593+00:00",
+          "operation": "policy",
+          "experiment": "exp2"
+        },
+        {
+          "time": "2026-09-18T02:48:13.793209+00:00",
+          "operation": "issuance",
+          "experiment": "exp2",
+          "certificate_dn": "\\VED\\Policy\\agent\\1735f26cb9aaf27a1a2d4fb0c5ee4ecf3371b304",
+          "common_name": "demo.agent.test",
+          "serial": "1735f26cb9aaf27a1a2d4fb0c5ee4ecf3371b304"
+        },
+        {
+          "time": "2026-09-18T02:48:13.798521+00:00",
+          "operation": "retrieval",
+          "experiment": "exp2",
+          "certificate_dn": "\\VED\\Policy\\agent\\1735f26cb9aaf27a1a2d4fb0c5ee4ecf3371b304",
+          "serial": "1735f26cb9aaf27a1a2d4fb0c5ee4ecf3371b304"
+        },
+        {
+          "time": "2026-09-18T02:48:16.136732+00:00",
+          "operation": "auth",
+          "experiment": "exp1"
+        },
+        {
+          "time": "2026-09-18T02:48:16.140258+00:00",
+          "operation": "policy",
+          "experiment": "exp1"
+        },
+        {
+          "time": "2026-09-18T02:48:16.144681+00:00",
+          "operation": "issuance",
+          "experiment": "exp1",
+          "certificate_dn": "\\VED\\Policy\\cm\\51bdbdace0736251288d3aa2e5b6c5686f2c9e9e",
+          "common_name": "demo.cm.test",
+          "serial": "51bdbdace0736251288d3aa2e5b6c5686f2c9e9e"
+        },
+        {
+          "time": "2026-09-18T02:48:16.150980+00:00",
+          "operation": "retrieval",
+          "experiment": "exp1",
+          "certificate_dn": "\\VED\\Policy\\cm\\51bdbdace0736251288d3aa2e5b6c5686f2c9e9e",
+          "serial": "51bdbdace0736251288d3aa2e5b6c5686f2c9e9e"
+        }
+      ],
+      "certificates": [
+        {
+          "experiment": "exp2",
+          "common_name": "demo.agent.test",
+          "serial": "1735f26cb9aaf27a1a2d4fb0c5ee4ecf3371b304",
+          "not_before": "2026-09-18T02:48:13+00:00",
+          "not_after": "2026-09-18T03:00:13+00:00",
+          "requested_ca_attributes": [
+            {
+              "Name": "Origin",
+              "Value": "HashiCorp Vault"
+            },
+            {
+              "Name": "Specific End Date",
+              "Value": "2026-09-18T03:48:13Z"
+            }
+          ],
+          "certificate_dn": "\\VED\\Policy\\agent\\1735f26cb9aaf27a1a2d4fb0c5ee4ecf3371b304"
+        },
+        {
+          "experiment": "exp1",
+          "common_name": "demo.cm.test",
+          "serial": "51bdbdace0736251288d3aa2e5b6c5686f2c9e9e",
+          "not_before": "2026-09-18T02:48:16+00:00",
+          "not_after": "2026-09-18T03:00:16+00:00",
+          "requested_ca_attributes": [
+            {
+              "Name": "Origin",
+              "Value": "HashiCorp Vault"
+            },
+            {
+              "Name": "Specific End Date",
+              "Value": "2026-09-18T03:48:16Z"
+            }
+          ],
+          "certificate_dn": "\\VED\\Policy\\cm\\51bdbdace0736251288d3aa2e5b6c5686f2c9e9e"
+        }
+      ]
+    }
+  },
+  "final_shutdown_ports_closed": {
+    "18080": true,
+    "18081": true,
+    "18082": true,
+    "18200": true,
+    "18201": true
+  },
+  "containers_after": {
+    "kind-control-plane": "6e3a95263b4d74e7e3ba1db67dde27aa38473432be3177bc01aa31d65985923a",
+    "kind-registry": "e32466f79c80c826f8c323a78f67a574b4ddee0a4e662732003bd5f393248d67"
+  },
+  "finished_at": "2026-09-18T02:48:23.043534+00:00",
+  "passed": true
+}

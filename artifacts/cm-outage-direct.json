@@ -1,0 +1,34 @@
+{
+  "observed_at": "2026-09-18T02:41:10.157168+00:00",
+  "before_pod_name": "demo-7d4d5f8d95-bdjzh",
+  "before_serial": "46B1D39D2BC68204CB59D732FD65EC0FB23EA905",
+  "before_public_key_sha256": "487e9aef2acc6ffddd1191ac11ffb161024f661fab4df51bcc72b8a088b94693",
+  "mock_desired_replicas": 0,
+  "replacement_observations": [
+    {
+      "uid": "780abc77-6db7-4f55-8fcd-4253d1b6ec1b",
+      "name": "demo-7d4d5f8d95-mj9d4",
+      "certificate": {
+        "ready": true,
+        "serial": "46B1D39D2BC68204CB59D732FD65EC0FB23EA905",
+        "subject": "CN=demo.cm.test",
+        "issuer": "CN=Lifecycle Lab Mock TPP CA",
+        "sans": "DNS:demo.cm.test",
+        "fingerprint_sha256": "20:59:65:9F:FE:A4:0D:BE:58:C3:F8:40:38:93:95:DF:C9:3B:6A:C2:9B:9E:9B:21:8F:9E:E5:A1:B8:2F:D9:26",
+        "public_key_sha256": "487e9aef2acc6ffddd1191ac11ffb161024f661fab4df51bcc72b8a088b94693",
+        "pod_name": "demo-7d4d5f8d95-mj9d4",
+        "experiment": "cert-manager",
+        "storage": "Kubernetes TLS Secret / demo-tls",
+        "requested_duration_seconds": 3600,
+        "actual_duration_seconds": 720,
+        "not_before": 1789699096,
+        "not_after": 1789699816,
+        "midpoint": 1789699456,
+        "remaining_seconds": 546,
+        "observed_at": 1789699270,
+        "valid": true
+      }
+    }
+  ],
+  "passed": true
+}

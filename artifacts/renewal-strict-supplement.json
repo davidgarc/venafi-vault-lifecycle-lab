@@ -1,0 +1,13 @@
+{
+  "checks": {
+    "cm_issuances_during_window": 3,
+    "cm_retrievals_during_window": 3,
+    "cm_all_three_valid_and_converged_at_end": true,
+    "agent_issuances_during_window": 2,
+    "agent_retrievals_during_window": 2,
+    "agent_all_three_valid_and_converged_at_end": false,
+    "cm_issuances_through_last_converged_rotation": 2,
+    "agent_issuances_through_last_converged_rotation": 1
+  },
+  "note": "Independent recheck of captured live observations after strengthening verifier; does not replace the failing native renewal report. The overall window extended into a third CM issuance while waiting for the stalled Agent; use per-converged-cycle counts, not total window counts, to assess duplicate issuance."
+}

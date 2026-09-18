@@ -1,0 +1,29 @@
+# HashiCorp vault Helm chart 0.30.1; server runs in the separate Vault cluster.
+server:
+  enabled: false
+injector:
+  enabled: true
+  image:
+    repository: hashicorp/vault-k8s
+    tag: '1.7.0@sha256:8c18ccc87fd72930fd0c3f12ea444e9e57e83f119b93c546ed047aba29a05c5f'
+  agentImage:
+    repository: hashicorp/vault
+    tag: '1.21.4@sha256:4e33b126a59c0c333b76fb4e894722462659a6bec7c48c9ee8cea56fccfd2569'
+  authPath: auth/kubernetes-agent
+  agentDefaults:
+    cpuRequest: 25m
+    cpuLimit: 250m
+    memRequest: 32Mi
+    memLimit: 128Mi
+  webhook:
+    failurePolicy: Fail
+    namespaceSelector:
+      matchLabels:
+        venafi-lab-experiment: agent
+  resources:
+    requests:
+      cpu: 25m
+      memory: 64Mi
+    limits:
+      cpu: 250m
+      memory: 128Mi

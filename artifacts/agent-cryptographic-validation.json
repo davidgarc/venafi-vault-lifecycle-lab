@@ -1,0 +1,17 @@
+[
+  {
+    "pod": "demo-c777bbf64-645l4",
+    "chain_hostname_validity": true,
+    "public_result": "/vault/secrets/bundle.pem: OK"
+  },
+  {
+    "pod": "demo-c777bbf64-blmt8",
+    "chain_hostname_validity": true,
+    "public_result": "/vault/secrets/bundle.pem: OK"
+  },
+  {
+    "pod": "demo-c777bbf64-zfxsc",
+    "chain_hostname_validity": true,
+    "public_result": "/vault/secrets/bundle.pem: OK"
+  }
+]

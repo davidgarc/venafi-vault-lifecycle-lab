@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "checks": [
+    "private key matches certificate public key",
+    "chain validates against mounted CA",
+    "hostname matches demo.cm.test",
+    "certificate currently valid"
+  ],
+  "public_output": "/certs/tls.crt: OK\nCertificate will not expire\nmatching_public_key_sha256=2a04c640074f298c2934eadc0dd1be1d7cb698522eea517e78c06ec9328f9b49\n"
+}

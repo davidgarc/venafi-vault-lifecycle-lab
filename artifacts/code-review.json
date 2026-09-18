@@ -1,0 +1,6 @@
+{
+  "findings": [],
+  "overall_correctness": "patch is correct",
+  "overall_explanation": "No material actionable defects found in the provided bundle. The cleanup check now verifies Agent node identity and certificate availability/validity without rejecting legitimate renewal. The documented native Agent renewal limitation remains a failed validation gate. Review was static; no tests or mutations were performed.",
+  "overall_confidence": 0.86
+}

@@ -1,0 +1,14 @@
+{
+  "cm-vault-issuer-to-agent": {
+    "rejected": true,
+    "http_status": 403
+  },
+  "agent-demo-to-cm": {
+    "rejected": true,
+    "http_status": 403
+  },
+  "agent-default-to-agent": {
+    "rejected": true,
+    "http_status": 403
+  }
+}

@@ -4,3 +4,6 @@
 *.p12
 *.pfx
 artifacts/private/
+
+__pycache__/
+*.pyc

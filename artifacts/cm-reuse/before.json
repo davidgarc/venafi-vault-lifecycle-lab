@@ -1,0 +1,64 @@
+{
+  "observed_at": "2026-09-18T02:15:10.645368+00:00",
+  "context": "kind-venafi-lab-cm",
+  "pods": [
+    {
+      "pod_name": "demo-8569dbf469-pjd8q",
+      "pod_uid": "fa4c126c-0a94-4285-bba7-d9a245dc4948",
+      "certificate": {
+        "ready": true,
+        "serial": "61626D8EE81C1B1AC68E81209B9173E6F1D75FC9",
+        "subject": "CN=demo.cm.test",
+        "issuer": "CN=Lifecycle Lab Mock TPP CA",
+        "sans": "DNS:demo.cm.test",
+        "fingerprint_sha256": "9A:24:81:45:80:9D:B9:BF:7F:28:E7:A4:5D:49:17:1E:6F:CD:A0:4E:4B:E5:DD:AD:10:3D:AE:8D:16:75:2C:C8",
+        "public_key_sha256": "2a04c640074f298c2934eadc0dd1be1d7cb698522eea517e78c06ec9328f9b49",
+        "pod_name": "demo-8569dbf469-pjd8q",
+        "experiment": "cert-manager",
+        "storage": "Kubernetes TLS Secret / demo-tls",
+        "requested_duration_seconds": 3600,
+        "actual_duration_seconds": 720,
+        "not_before": 1789697656,
+        "not_after": 1789698376,
+        "midpoint": 1789698016,
+        "remaining_seconds": 666,
+        "observed_at": 1789697710,
+        "valid": true
+      }
+    }
+  ],
+  "certificate_status": {
+    "conditions": [
+      {
+        "lastTransitionTime": "2026-09-18T02:14:16Z",
+        "message": "Certificate is up to date and has not expired",
+        "observedGeneration": 1,
+        "reason": "Ready",
+        "status": "True",
+        "type": "Ready"
+      }
+    ],
+    "notAfter": "2026-09-18T02:26:16Z",
+    "notBefore": "2026-09-18T02:14:16Z",
+    "renewalTime": "2026-09-18T02:20:16Z",
+    "revision": 1
+  },
+  "issuer_status": {
+    "conditions": [
+      {
+        "lastTransitionTime": "2026-09-18T02:14:16Z",
+        "message": "Vault verified",
+        "observedGeneration": 1,
+        "reason": "VaultVerified",
+        "status": "True",
+        "type": "Ready"
+      }
+    ]
+  },
+  "secrets": [
+    {
+      "name": "demo-tls",
+      "type": "kubernetes.io/tls"
+    }
+  ]
+}

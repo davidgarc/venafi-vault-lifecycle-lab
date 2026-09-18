@@ -1,0 +1,1203 @@
+{
+  "started_at": "2026-09-18T02:34:50.308902+00:00",
+  "checks": {
+    "vault_restart_cache_identity_reused": true,
+    "vault_restart_no_issuance": true,
+    "vault_restart_no_retrieval": true,
+    "cm_identity_survives_vault_restart": true,
+    "existing_files_remain_usable_during_outage": true,
+    "cm_existing_secret_usable_during_outage": true,
+    "cm_replacement_reuses_secret_during_outage": true,
+    "all_agent_pods_recovered": true,
+    "cm_recovered": true
+  },
+  "limitations": [
+    "New Agent pods could not recover the cached certificate while complete upstream TPP service, including authentication, was unavailable; existing files remained usable."
+  ],
+  "before": {
+    "observed_at": "2026-09-18T02:34:54.747351+00:00",
+    "context": "kind-venafi-lab-agent",
+    "pods": [
+      {
+        "name": "demo-c777bbf64-645l4",
+        "uid": "a3c7e09a-05f3-492e-bf35-145018a4788e",
+        "phase": "Running",
+        "containers": [
+          {
+            "name": "app",
+            "ready": true,
+            "restartCount": 1
+          },
+          {
+            "name": "vault-agent",
+            "ready": true,
+            "restartCount": 0
+          }
+        ],
+        "volumes": [
+          {
+            "name": "home-init",
+            "emptyDir": {
+              "medium": "Memory"
+            }
+          },
+          {
+            "name": "home-sidecar",
+            "emptyDir": {
+              "medium": "Memory"
+            }
+          },
+          {
+            "name": "vault-secrets",
+            "emptyDir": {
+              "medium": "Memory"
+            }
+          }
+        ],
+        "certificate": {
+          "ready": true,
+          "serial": "262DA35C553E82CBC7753B6694748C7DC472F10B",
+          "subject": "CN=demo.agent.test",
+          "issuer": "CN=Lifecycle Lab Mock TPP CA",
+          "sans": "DNS:demo.agent.test",
+          "fingerprint_sha256": "71:3F:EC:82:7A:79:67:09:ED:CC:D3:3B:7F:96:AE:9A:EC:37:BE:5E:CB:77:C1:4D:32:EC:22:DA:D3:E1:98:64",
+          "public_key_sha256": "af9baa0090911cb505e2552c7c2d22cc1369fcec5237761cb98cc4501ada0e2a",
+          "pod_name": "demo-c777bbf64-645l4",
+          "experiment": "agent",
+          "storage": "Agent memory emptyDir; durable identity in Vault plugin storage",
+          "requested_duration_seconds": 3600,
+          "actual_duration_seconds": 720,
+          "not_before": 1789698802,
+          "not_after": 1789699522,
+          "midpoint": 1789699162,
+          "remaining_seconds": 631,
+          "observed_at": 1789698891,
+          "valid": true
+        },
+        "certificate_key_match": true
+      },
+      {
+        "name": "demo-c777bbf64-blmt8",
+        "uid": "b79e8f45-7326-433b-95a4-0e03f8f43891",
+        "phase": "Running",
+        "containers": [
+          {
+            "name": "app",
+            "ready": true,
+            "restartCount": 0
+          },
+          {
+            "name": "vault-agent",
+            "ready": true,
+            "restartCount": 0
+          }
+        ],
+        "volumes": [
+          {
+            "name": "home-init",
+            "emptyDir": {
+              "medium": "Memory"
+            }
+          },
+          {
+            "name": "home-sidecar",
+            "emptyDir": {
+              "medium": "Memory"
+            }
+          },
+          {
+            "name": "vault-secrets",
+            "emptyDir": {
+              "medium": "Memory"
+            }
+          }
+        ],
+        "certificate": {
+          "ready": true,
+          "serial": "262DA35C553E82CBC7753B6694748C7DC472F10B",
+          "subject": "CN=demo.agent.test",
+          "issuer": "CN=Lifecycle Lab Mock TPP CA",
+          "sans": "DNS:demo.agent.test",
+          "fingerprint_sha256": "71:3F:EC:82:7A:79:67:09:ED:CC:D3:3B:7F:96:AE:9A:EC:37:BE:5E:CB:77:C1:4D:32:EC:22:DA:D3:E1:98:64",
+          "public_key_sha256": "af9baa0090911cb505e2552c7c2d22cc1369fcec5237761cb98cc4501ada0e2a",
+          "pod_name": "demo-c777bbf64-blmt8",
+          "experiment": "agent",
+          "storage": "Agent memory emptyDir; durable identity in Vault plugin storage",
+          "requested_duration_seconds": 3600,
+          "actual_duration_seconds": 720,
+          "not_before": 1789698802,
+          "not_after": 1789699522,
+          "midpoint": 1789699162,
+          "remaining_seconds": 630,
+          "observed_at": 1789698892,
+          "valid": true
+        },
+        "certificate_key_match": true
+      },
+      {
+        "name": "demo-c777bbf64-zfxsc",
+        "uid": "d7a5f7b4-9320-4546-a917-0fca841c471e",
+        "phase": "Running",
+        "containers": [
+          {
+            "name": "app",
+            "ready": true,
+            "restartCount": 0
+          },
+          {
+            "name": "vault-agent",
+            "ready": true,
+            "restartCount": 0
+          }
+        ],
+        "volumes": [
+          {
+            "name": "home-init",
+            "emptyDir": {
+              "medium": "Memory"
+            }
+          },
+          {
+            "name": "home-sidecar",
+            "emptyDir": {
+              "medium": "Memory"
+            }
+          },
+          {
+            "name": "vault-secrets",
+            "emptyDir": {
+              "medium": "Memory"
+            }
+          }
+        ],
+        "certificate": {
+          "ready": true,
+          "serial": "262DA35C553E82CBC7753B6694748C7DC472F10B",
+          "subject": "CN=demo.agent.test",
+          "issuer": "CN=Lifecycle Lab Mock TPP CA",
+          "sans": "DNS:demo.agent.test",
+          "fingerprint_sha256": "71:3F:EC:82:7A:79:67:09:ED:CC:D3:3B:7F:96:AE:9A:EC:37:BE:5E:CB:77:C1:4D:32:EC:22:DA:D3:E1:98:64",
+          "public_key_sha256": "af9baa0090911cb505e2552c7c2d22cc1369fcec5237761cb98cc4501ada0e2a",
+          "pod_name": "demo-c777bbf64-zfxsc",
+          "experiment": "agent",
+          "storage": "Agent memory emptyDir; durable identity in Vault plugin storage",
+          "requested_duration_seconds": 3600,
+          "actual_duration_seconds": 720,
+          "not_before": 1789698802,
+          "not_after": 1789699522,
+          "midpoint": 1789699162,
+          "remaining_seconds": 628,
+          "observed_at": 1789698894,
+          "valid": true
+        },
+        "certificate_key_match": true
+      }
+    ],
+    "inventory": [
+      {
+        "kind": "configmaps",
+        "name": "kube-root-ca.crt",
+        "type": null,
+        "pem_fields": [
+          "ca.crt"
+        ]
+      }
+    ]
+  },
+  "cm_before": {
+    "ready": true,
+    "serial": "61D29B0CE08A71691499115A8D5486FA008F26DC",
+    "subject": "CN=demo.cm.test",
+    "issuer": "CN=Lifecycle Lab Mock TPP CA",
+    "sans": "DNS:demo.cm.test",
+    "fingerprint_sha256": "33:C2:19:55:14:96:4A:7A:B9:82:6E:A3:B8:95:D7:C4:4A:04:F7:90:38:DD:AF:24:06:19:45:36:62:47:3A:A7",
+    "public_key_sha256": "94b714e0620b9ebf4eb977a1d29ee34a47402936ced6c5175ee451c347c7b40d",
+    "pod_name": "demo-7d4d5f8d95-bdjzh",
+    "experiment": "cert-manager",
+    "storage": "Kubernetes TLS Secret / demo-tls",
+    "requested_duration_seconds": 3600,
+    "actual_duration_seconds": 720,
+    "not_before": 1789698736,
+    "not_after": 1789699456,
+    "midpoint": 1789699096,
+    "remaining_seconds": 562,
+    "observed_at": 1789698894,
+    "valid": true
+  },
+  "counters_before": {
+    "exp1": {
+      "issuance": 4,
+      "retrieval": 4,
+      "auth": 4,
+      "policy": 4
+    },
+    "exp2": {
+      "issuance": 4,
+      "retrieval": 4,
+      "auth": 21,
+      "policy": 4
+    }
+  },
+  "after_vault_restart": {
+    "observed_at": "2026-09-18T02:35:36.842666+00:00",
+    "context": "kind-venafi-lab-agent",
+    "pods": [
+      {
+        "name": "demo-c777bbf64-blmt8",
+        "uid": "b79e8f45-7326-433b-95a4-0e03f8f43891",
+        "phase": "Running",
+        "containers": [
+          {
+            "name": "app",
+            "ready": true,
+            "restartCount": 0
+          },
+          {
+            "name": "vault-agent",
+            "ready": true,
+            "restartCount": 0
+          }
+        ],
+        "volumes": [
+          {
+            "name": "home-init",
+            "emptyDir": {
+              "medium": "Memory"
+            }
+          },
+          {
+            "name": "home-sidecar",
+            "emptyDir": {
+              "medium": "Memory"
+            }
+          },
+          {
+            "name": "vault-secrets",
+            "emptyDir": {
+              "medium": "Memory"
+            }
+          }
+        ],
+        "certificate": {
+          "ready": true,
+          "serial": "262DA35C553E82CBC7753B6694748C7DC472F10B",
+          "subject": "CN=demo.agent.test",
+          "issuer": "CN=Lifecycle Lab Mock TPP CA",
+          "sans": "DNS:demo.agent.test",
+          "fingerprint_sha256": "71:3F:EC:82:7A:79:67:09:ED:CC:D3:3B:7F:96:AE:9A:EC:37:BE:5E:CB:77:C1:4D:32:EC:22:DA:D3:E1:98:64",
+          "public_key_sha256": "af9baa0090911cb505e2552c7c2d22cc1369fcec5237761cb98cc4501ada0e2a",
+          "pod_name": "demo-c777bbf64-blmt8",
+          "experiment": "agent",
+          "storage": "Agent memory emptyDir; durable identity in Vault plugin storage",
+          "requested_duration_seconds": 3600,
+          "actual_duration_seconds": 720,
+          "not_before": 1789698802,
+          "not_after": 1789699522,
+          "midpoint": 1789699162,
+          "remaining_seconds": 591,
+          "observed_at": 1789698931,
+          "valid": true
+        },
+        "certificate_key_match": true
+      },
+      {
+        "name": "demo-c777bbf64-kv4sl",
+        "uid": "569c8f51-06f2-4700-8514-76b9b518e981",
+        "phase": "Running",
+        "containers": [
+          {
+            "name": "app",
+            "ready": true,
+            "restartCount": 0
+          },
+          {
+            "name": "vault-agent",
+            "ready": true,
+            "restartCount": 0
+          }
+        ],
+        "volumes": [
+          {
+            "name": "home-init",
+            "emptyDir": {
+              "medium": "Memory"
+            }
+          },
+          {
+            "name": "home-sidecar",
+            "emptyDir": {
+              "medium": "Memory"
+            }
+          },
+          {
+            "name": "vault-secrets",
+            "emptyDir": {
+              "medium": "Memory"
+            }
+          }
+        ],
+        "certificate": {
+          "ready": true,
+          "serial": "262DA35C553E82CBC7753B6694748C7DC472F10B",
+          "subject": "CN=demo.agent.test",
+          "issuer": "CN=Lifecycle Lab Mock TPP CA",
+          "sans": "DNS:demo.agent.test",
+          "fingerprint_sha256": "71:3F:EC:82:7A:79:67:09:ED:CC:D3:3B:7F:96:AE:9A:EC:37:BE:5E:CB:77:C1:4D:32:EC:22:DA:D3:E1:98:64",
+          "public_key_sha256": "af9baa0090911cb505e2552c7c2d22cc1369fcec5237761cb98cc4501ada0e2a",
+          "pod_name": "demo-c777bbf64-kv4sl",
+          "experiment": "agent",
+          "storage": "Agent memory emptyDir; durable identity in Vault plugin storage",
+          "requested_duration_seconds": 3600,
+          "actual_duration_seconds": 720,
+          "not_before": 1789698802,
+          "not_after": 1789699522,
+          "midpoint": 1789699162,
+          "remaining_seconds": 589,
+          "observed_at": 1789698933,
+          "valid": true
+        },
+        "certificate_key_match": true
+      },
+      {
+        "name": "demo-c777bbf64-zfxsc",
+        "uid": "d7a5f7b4-9320-4546-a917-0fca841c471e",
+        "phase": "Running",
+        "containers": [
+          {
+            "name": "app",
+            "ready": true,
+            "restartCount": 0
+          },
+          {
+            "name": "vault-agent",
+            "ready": true,
+            "restartCount": 0
+          }
+        ],
+        "volumes": [
+          {
+            "name": "home-init",
+            "emptyDir": {
+              "medium": "Memory"
+            }
+          },
+          {
+            "name": "home-sidecar",
+            "emptyDir": {
+              "medium": "Memory"
+            }
+          },
+          {
+            "name": "vault-secrets",
+            "emptyDir": {
+              "medium": "Memory"
+            }
+          }
+        ],
+        "certificate": {
+          "ready": true,
+          "serial": "262DA35C553E82CBC7753B6694748C7DC472F10B",
+          "subject": "CN=demo.agent.test",
+          "issuer": "CN=Lifecycle Lab Mock TPP CA",
+          "sans": "DNS:demo.agent.test",
+          "fingerprint_sha256": "71:3F:EC:82:7A:79:67:09:ED:CC:D3:3B:7F:96:AE:9A:EC:37:BE:5E:CB:77:C1:4D:32:EC:22:DA:D3:E1:98:64",
+          "public_key_sha256": "af9baa0090911cb505e2552c7c2d22cc1369fcec5237761cb98cc4501ada0e2a",
+          "pod_name": "demo-c777bbf64-zfxsc",
+          "experiment": "agent",
+          "storage": "Agent memory emptyDir; durable identity in Vault plugin storage",
+          "requested_duration_seconds": 3600,
+          "actual_duration_seconds": 720,
+          "not_before": 1789698802,
+          "not_after": 1789699522,
+          "midpoint": 1789699162,
+          "remaining_seconds": 587,
+          "observed_at": 1789698935,
+          "valid": true
+        },
+        "certificate_key_match": true
+      }
+    ],
+    "inventory": [
+      {
+        "kind": "configmaps",
+        "name": "kube-root-ca.crt",
+        "type": null,
+        "pem_fields": [
+          "ca.crt"
+        ]
+      }
+    ]
+  },
+  "vault_restart_counter_delta": {
+    "exp2": {
+      "policy": 0,
+      "retrieval": 0,
+      "issuance": 0,
+      "auth": 1
+    },
+    "exp1": {
+      "policy": 0,
+      "retrieval": 0,
+      "issuance": 0,
+      "auth": 0
+    }
+  },
+  "outage_baseline": {
+    "observed_at": "2026-09-18T02:39:36.751596+00:00",
+    "context": "kind-venafi-lab-agent",
+    "pods": [
+      {
+        "name": "demo-c777bbf64-blmt8",
+        "uid": "b79e8f45-7326-433b-95a4-0e03f8f43891",
+        "phase": "Running",
+        "containers": [
+          {
+            "name": "app",
+            "ready": true,
+            "restartCount": 0
+          },
+          {
+            "name": "vault-agent",
+            "ready": true,
+            "restartCount": 0
+          }
+        ],
+        "volumes": [
+          {
+            "name": "home-init",
+            "emptyDir": {
+              "medium": "Memory"
+            }
+          },
+          {
+            "name": "home-sidecar",
+            "emptyDir": {
+              "medium": "Memory"
+            }
+          },
+          {
+            "name": "vault-secrets",
+            "emptyDir": {
+              "medium": "Memory"
+            }
+          }
+        ],
+        "certificate": {
+          "ready": true,
+          "serial": "03B7E08A4F05BE9FE79AA938FF9E17190BC228EF",
+          "subject": "CN=demo.agent.test",
+          "issuer": "CN=Lifecycle Lab Mock TPP CA",
+          "sans": "DNS:demo.agent.test",
+          "fingerprint_sha256": "16:52:7F:75:97:19:56:B5:FD:C1:AC:0C:48:BC:C8:D7:16:8D:20:1C:71:02:A0:9B:44:59:68:CD:3A:99:EF:D5",
+          "public_key_sha256": "340d02e0253e7599db5b14f0e52b5d0dae722e74a252b5e369eb6132d135b149",
+          "pod_name": "demo-c777bbf64-blmt8",
+          "experiment": "agent",
+          "storage": "Agent memory emptyDir; durable identity in Vault plugin storage",
+          "requested_duration_seconds": 3600,
+          "actual_duration_seconds": 720,
+          "not_before": 1789699162,
+          "not_after": 1789699882,
+          "midpoint": 1789699522,
+          "remaining_seconds": 710,
+          "observed_at": 1789699172,
+          "valid": true
+        },
+        "certificate_key_match": true
+      },
+      {
+        "name": "demo-c777bbf64-kv4sl",
+        "uid": "569c8f51-06f2-4700-8514-76b9b518e981",
+        "phase": "Running",
+        "containers": [
+          {
+            "name": "app",
+            "ready": true,
+            "restartCount": 0
+          },
+          {
+            "name": "vault-agent",
+            "ready": true,
+            "restartCount": 0
+          }
+        ],
+        "volumes": [
+          {
+            "name": "home-init",
+            "emptyDir": {
+              "medium": "Memory"
+            }
+          },
+          {
+            "name": "home-sidecar",
+            "emptyDir": {
+              "medium": "Memory"
+            }
+          },
+          {
+            "name": "vault-secrets",
+            "emptyDir": {
+              "medium": "Memory"
+            }
+          }
+        ],
+        "certificate": {
+          "ready": true,
+          "serial": "03B7E08A4F05BE9FE79AA938FF9E17190BC228EF",
+          "subject": "CN=demo.agent.test",
+          "issuer": "CN=Lifecycle Lab Mock TPP CA",
+          "sans": "DNS:demo.agent.test",
+          "fingerprint_sha256": "16:52:7F:75:97:19:56:B5:FD:C1:AC:0C:48:BC:C8:D7:16:8D:20:1C:71:02:A0:9B:44:59:68:CD:3A:99:EF:D5",
+          "public_key_sha256": "340d02e0253e7599db5b14f0e52b5d0dae722e74a252b5e369eb6132d135b149",
+          "pod_name": "demo-c777bbf64-kv4sl",
+          "experiment": "agent",
+          "storage": "Agent memory emptyDir; durable identity in Vault plugin storage",
+          "requested_duration_seconds": 3600,
+          "actual_duration_seconds": 720,
+          "not_before": 1789699162,
+          "not_after": 1789699882,
+          "midpoint": 1789699522,
+          "remaining_seconds": 709,
+          "observed_at": 1789699173,
+          "valid": true
+        },
+        "certificate_key_match": true
+      },
+      {
+        "name": "demo-c777bbf64-zfxsc",
+        "uid": "d7a5f7b4-9320-4546-a917-0fca841c471e",
+        "phase": "Running",
+        "containers": [
+          {
+            "name": "app",
+            "ready": true,
+            "restartCount": 0
+          },
+          {
+            "name": "vault-agent",
+            "ready": true,
+            "restartCount": 0
+          }
+        ],
+        "volumes": [
+          {
+            "name": "home-init",
+            "emptyDir": {
+              "medium": "Memory"
+            }
+          },
+          {
+            "name": "home-sidecar",
+            "emptyDir": {
+              "medium": "Memory"
+            }
+          },
+          {
+            "name": "vault-secrets",
+            "emptyDir": {
+              "medium": "Memory"
+            }
+          }
+        ],
+        "certificate": {
+          "ready": true,
+          "serial": "03B7E08A4F05BE9FE79AA938FF9E17190BC228EF",
+          "subject": "CN=demo.agent.test",
+          "issuer": "CN=Lifecycle Lab Mock TPP CA",
+          "sans": "DNS:demo.agent.test",
+          "fingerprint_sha256": "16:52:7F:75:97:19:56:B5:FD:C1:AC:0C:48:BC:C8:D7:16:8D:20:1C:71:02:A0:9B:44:59:68:CD:3A:99:EF:D5",
+          "public_key_sha256": "340d02e0253e7599db5b14f0e52b5d0dae722e74a252b5e369eb6132d135b149",
+          "pod_name": "demo-c777bbf64-zfxsc",
+          "experiment": "agent",
+          "storage": "Agent memory emptyDir; durable identity in Vault plugin storage",
+          "requested_duration_seconds": 3600,
+          "actual_duration_seconds": 720,
+          "not_before": 1789699162,
+          "not_after": 1789699882,
+          "midpoint": 1789699522,
+          "remaining_seconds": 707,
+          "observed_at": 1789699175,
+          "valid": true
+        },
+        "certificate_key_match": true
+      }
+    ],
+    "inventory": [
+      {
+        "kind": "configmaps",
+        "name": "kube-root-ca.crt",
+        "type": null,
+        "pem_fields": [
+          "ca.crt"
+        ]
+      }
+    ]
+  },
+  "during_outage_existing": {
+    "observed_at": "2026-09-18T02:40:15.747156+00:00",
+    "context": "kind-venafi-lab-agent",
+    "pods": [
+      {
+        "name": "demo-c777bbf64-blmt8",
+        "uid": "b79e8f45-7326-433b-95a4-0e03f8f43891",
+        "phase": "Running",
+        "containers": [
+          {
+            "name": "app",
+            "ready": true,
+            "restartCount": 0
+          },
+          {
+            "name": "vault-agent",
+            "ready": true,
+            "restartCount": 0
+          }
+        ],
+        "volumes": [
+          {
+            "name": "home-init",
+            "emptyDir": {
+              "medium": "Memory"
+            }
+          },
+          {
+            "name": "home-sidecar",
+            "emptyDir": {
+              "medium": "Memory"
+            }
+          },
+          {
+            "name": "vault-secrets",
+            "emptyDir": {
+              "medium": "Memory"
+            }
+          }
+        ],
+        "certificate": {
+          "ready": true,
+          "serial": "03B7E08A4F05BE9FE79AA938FF9E17190BC228EF",
+          "subject": "CN=demo.agent.test",
+          "issuer": "CN=Lifecycle Lab Mock TPP CA",
+          "sans": "DNS:demo.agent.test",
+          "fingerprint_sha256": "16:52:7F:75:97:19:56:B5:FD:C1:AC:0C:48:BC:C8:D7:16:8D:20:1C:71:02:A0:9B:44:59:68:CD:3A:99:EF:D5",
+          "public_key_sha256": "340d02e0253e7599db5b14f0e52b5d0dae722e74a252b5e369eb6132d135b149",
+          "pod_name": "demo-c777bbf64-blmt8",
+          "experiment": "agent",
+          "storage": "Agent memory emptyDir; durable identity in Vault plugin storage",
+          "requested_duration_seconds": 3600,
+          "actual_duration_seconds": 720,
+          "not_before": 1789699162,
+          "not_after": 1789699882,
+          "midpoint": 1789699522,
+          "remaining_seconds": 673,
+          "observed_at": 1789699209,
+          "valid": true
+        },
+        "certificate_key_match": true
+      },
+      {
+        "name": "demo-c777bbf64-kv4sl",
+        "uid": "569c8f51-06f2-4700-8514-76b9b518e981",
+        "phase": "Running",
+        "containers": [
+          {
+            "name": "app",
+            "ready": true,
+            "restartCount": 0
+          },
+          {
+            "name": "vault-agent",
+            "ready": true,
+            "restartCount": 0
+          }
+        ],
+        "volumes": [
+          {
+            "name": "home-init",
+            "emptyDir": {
+              "medium": "Memory"
+            }
+          },
+          {
+            "name": "home-sidecar",
+            "emptyDir": {
+              "medium": "Memory"
+            }
+          },
+          {
+            "name": "vault-secrets",
+            "emptyDir": {
+              "medium": "Memory"
+            }
+          }
+        ],
+        "certificate": {
+          "ready": true,
+          "serial": "03B7E08A4F05BE9FE79AA938FF9E17190BC228EF",
+          "subject": "CN=demo.agent.test",
+          "issuer": "CN=Lifecycle Lab Mock TPP CA",
+          "sans": "DNS:demo.agent.test",
+          "fingerprint_sha256": "16:52:7F:75:97:19:56:B5:FD:C1:AC:0C:48:BC:C8:D7:16:8D:20:1C:71:02:A0:9B:44:59:68:CD:3A:99:EF:D5",
+          "public_key_sha256": "340d02e0253e7599db5b14f0e52b5d0dae722e74a252b5e369eb6132d135b149",
+          "pod_name": "demo-c777bbf64-kv4sl",
+          "experiment": "agent",
+          "storage": "Agent memory emptyDir; durable identity in Vault plugin storage",
+          "requested_duration_seconds": 3600,
+          "actual_duration_seconds": 720,
+          "not_before": 1789699162,
+          "not_after": 1789699882,
+          "midpoint": 1789699522,
+          "remaining_seconds": 670,
+          "observed_at": 1789699212,
+          "valid": true
+        },
+        "certificate_key_match": true
+      },
+      {
+        "name": "demo-c777bbf64-zfxsc",
+        "uid": "d7a5f7b4-9320-4546-a917-0fca841c471e",
+        "phase": "Running",
+        "containers": [
+          {
+            "name": "app",
+            "ready": true,
+            "restartCount": 0
+          },
+          {
+            "name": "vault-agent",
+            "ready": true,
+            "restartCount": 0
+          }
+        ],
+        "volumes": [
+          {
+            "name": "home-init",
+            "emptyDir": {
+              "medium": "Memory"
+            }
+          },
+          {
+            "name": "home-sidecar",
+            "emptyDir": {
+              "medium": "Memory"
+            }
+          },
+          {
+            "name": "vault-secrets",
+            "emptyDir": {
+              "medium": "Memory"
+            }
+          }
+        ],
+        "certificate": {
+          "ready": true,
+          "serial": "03B7E08A4F05BE9FE79AA938FF9E17190BC228EF",
+          "subject": "CN=demo.agent.test",
+          "issuer": "CN=Lifecycle Lab Mock TPP CA",
+          "sans": "DNS:demo.agent.test",
+          "fingerprint_sha256": "16:52:7F:75:97:19:56:B5:FD:C1:AC:0C:48:BC:C8:D7:16:8D:20:1C:71:02:A0:9B:44:59:68:CD:3A:99:EF:D5",
+          "public_key_sha256": "340d02e0253e7599db5b14f0e52b5d0dae722e74a252b5e369eb6132d135b149",
+          "pod_name": "demo-c777bbf64-zfxsc",
+          "experiment": "agent",
+          "storage": "Agent memory emptyDir; durable identity in Vault plugin storage",
+          "requested_duration_seconds": 3600,
+          "actual_duration_seconds": 720,
+          "not_before": 1789699162,
+          "not_after": 1789699882,
+          "midpoint": 1789699522,
+          "remaining_seconds": 667,
+          "observed_at": 1789699215,
+          "valid": true
+        },
+        "certificate_key_match": true
+      }
+    ],
+    "inventory": [
+      {
+        "kind": "configmaps",
+        "name": "kube-root-ca.crt",
+        "type": null,
+        "pem_fields": [
+          "ca.crt"
+        ]
+      }
+    ]
+  },
+  "during_outage_replacement": {
+    "observed_at": "2026-09-18T02:41:35.423871+00:00",
+    "context": "kind-venafi-lab-agent",
+    "pods": [
+      {
+        "name": "demo-c777bbf64-kv4sl",
+        "uid": "569c8f51-06f2-4700-8514-76b9b518e981",
+        "phase": "Running",
+        "containers": [
+          {
+            "name": "app",
+            "ready": true,
+            "restartCount": 0
+          },
+          {
+            "name": "vault-agent",
+            "ready": true,
+            "restartCount": 0
+          }
+        ],
+        "volumes": [
+          {
+            "name": "home-init",
+            "emptyDir": {
+              "medium": "Memory"
+            }
+          },
+          {
+            "name": "home-sidecar",
+            "emptyDir": {
+              "medium": "Memory"
+            }
+          },
+          {
+            "name": "vault-secrets",
+            "emptyDir": {
+              "medium": "Memory"
+            }
+          }
+        ],
+        "certificate": {
+          "ready": true,
+          "serial": "03B7E08A4F05BE9FE79AA938FF9E17190BC228EF",
+          "subject": "CN=demo.agent.test",
+          "issuer": "CN=Lifecycle Lab Mock TPP CA",
+          "sans": "DNS:demo.agent.test",
+          "fingerprint_sha256": "16:52:7F:75:97:19:56:B5:FD:C1:AC:0C:48:BC:C8:D7:16:8D:20:1C:71:02:A0:9B:44:59:68:CD:3A:99:EF:D5",
+          "public_key_sha256": "340d02e0253e7599db5b14f0e52b5d0dae722e74a252b5e369eb6132d135b149",
+          "pod_name": "demo-c777bbf64-kv4sl",
+          "experiment": "agent",
+          "storage": "Agent memory emptyDir; durable identity in Vault plugin storage",
+          "requested_duration_seconds": 3600,
+          "actual_duration_seconds": 720,
+          "not_before": 1789699162,
+          "not_after": 1789699882,
+          "midpoint": 1789699522,
+          "remaining_seconds": 591,
+          "observed_at": 1789699291,
+          "valid": true
+        },
+        "certificate_key_match": true
+      },
+      {
+        "name": "demo-c777bbf64-zfxsc",
+        "uid": "d7a5f7b4-9320-4546-a917-0fca841c471e",
+        "phase": "Running",
+        "containers": [
+          {
+            "name": "app",
+            "ready": true,
+            "restartCount": 0
+          },
+          {
+            "name": "vault-agent",
+            "ready": true,
+            "restartCount": 0
+          }
+        ],
+        "volumes": [
+          {
+            "name": "home-init",
+            "emptyDir": {
+              "medium": "Memory"
+            }
+          },
+          {
+            "name": "home-sidecar",
+            "emptyDir": {
+              "medium": "Memory"
+            }
+          },
+          {
+            "name": "vault-secrets",
+            "emptyDir": {
+              "medium": "Memory"
+            }
+          }
+        ],
+        "certificate": {
+          "ready": true,
+          "serial": "03B7E08A4F05BE9FE79AA938FF9E17190BC228EF",
+          "subject": "CN=demo.agent.test",
+          "issuer": "CN=Lifecycle Lab Mock TPP CA",
+          "sans": "DNS:demo.agent.test",
+          "fingerprint_sha256": "16:52:7F:75:97:19:56:B5:FD:C1:AC:0C:48:BC:C8:D7:16:8D:20:1C:71:02:A0:9B:44:59:68:CD:3A:99:EF:D5",
+          "public_key_sha256": "340d02e0253e7599db5b14f0e52b5d0dae722e74a252b5e369eb6132d135b149",
+          "pod_name": "demo-c777bbf64-zfxsc",
+          "experiment": "agent",
+          "storage": "Agent memory emptyDir; durable identity in Vault plugin storage",
+          "requested_duration_seconds": 3600,
+          "actual_duration_seconds": 720,
+          "not_before": 1789699162,
+          "not_after": 1789699882,
+          "midpoint": 1789699522,
+          "remaining_seconds": 588,
+          "observed_at": 1789699294,
+          "valid": true
+        },
+        "certificate_key_match": true
+      },
+      {
+        "name": "demo-c777bbf64-zxn4j",
+        "uid": "abd52582-ad8a-4cc9-a526-389e8ba73ef2",
+        "phase": "Pending",
+        "containers": [
+          {
+            "name": "app",
+            "ready": false,
+            "restartCount": 0
+          },
+          {
+            "name": "vault-agent",
+            "ready": false,
+            "restartCount": 0
+          }
+        ],
+        "volumes": [
+          {
+            "name": "home-init",
+            "emptyDir": {
+              "medium": "Memory"
+            }
+          },
+          {
+            "name": "home-sidecar",
+            "emptyDir": {
+              "medium": "Memory"
+            }
+          },
+          {
+            "name": "vault-secrets",
+            "emptyDir": {
+              "medium": "Memory"
+            }
+          }
+        ],
+        "observation_error": "Command '['kubectl', '--context', 'kind-venafi-lab-agent', '-n', 'demo', 'exec', 'demo-c777bbf64-zxn4j', '-c', 'app', '--', 'wget', '-qO-', 'http://127.0.0.1:8080/cgi-bin/cert']' returned non-zero exit status 1."
+      }
+    ],
+    "inventory": [
+      {
+        "kind": "configmaps",
+        "name": "kube-root-ca.crt",
+        "type": null,
+        "pem_fields": [
+          "ca.crt"
+        ]
+      }
+    ]
+  },
+  "new_pod_blocked_during_upstream_outage": true,
+  "recovered": {
+    "observed_at": "2026-09-18T02:41:55.721557+00:00",
+    "context": "kind-venafi-lab-agent",
+    "pods": [
+      {
+        "name": "demo-c777bbf64-kv4sl",
+        "uid": "569c8f51-06f2-4700-8514-76b9b518e981",
+        "phase": "Running",
+        "containers": [
+          {
+            "name": "app",
+            "ready": true,
+            "restartCount": 0
+          },
+          {
+            "name": "vault-agent",
+            "ready": true,
+            "restartCount": 0
+          }
+        ],
+        "volumes": [
+          {
+            "name": "home-init",
+            "emptyDir": {
+              "medium": "Memory"
+            }
+          },
+          {
+            "name": "home-sidecar",
+            "emptyDir": {
+              "medium": "Memory"
+            }
+          },
+          {
+            "name": "vault-secrets",
+            "emptyDir": {
+              "medium": "Memory"
+            }
+          }
+        ],
+        "certificate": {
+          "ready": true,
+          "serial": "03B7E08A4F05BE9FE79AA938FF9E17190BC228EF",
+          "subject": "CN=demo.agent.test",
+          "issuer": "CN=Lifecycle Lab Mock TPP CA",
+          "sans": "DNS:demo.agent.test",
+          "fingerprint_sha256": "16:52:7F:75:97:19:56:B5:FD:C1:AC:0C:48:BC:C8:D7:16:8D:20:1C:71:02:A0:9B:44:59:68:CD:3A:99:EF:D5",
+          "public_key_sha256": "340d02e0253e7599db5b14f0e52b5d0dae722e74a252b5e369eb6132d135b149",
+          "pod_name": "demo-c777bbf64-kv4sl",
+          "experiment": "agent",
+          "storage": "Agent memory emptyDir; durable identity in Vault plugin storage",
+          "requested_duration_seconds": 3600,
+          "actual_duration_seconds": 720,
+          "not_before": 1789699162,
+          "not_after": 1789699882,
+          "midpoint": 1789699522,
+          "remaining_seconds": 571,
+          "observed_at": 1789699311,
+          "valid": true
+        },
+        "certificate_key_match": true
+      },
+      {
+        "name": "demo-c777bbf64-zfxsc",
+        "uid": "d7a5f7b4-9320-4546-a917-0fca841c471e",
+        "phase": "Running",
+        "containers": [
+          {
+            "name": "app",
+            "ready": true,
+            "restartCount": 0
+          },
+          {
+            "name": "vault-agent",
+            "ready": true,
+            "restartCount": 0
+          }
+        ],
+        "volumes": [
+          {
+            "name": "home-init",
+            "emptyDir": {
+              "medium": "Memory"
+            }
+          },
+          {
+            "name": "home-sidecar",
+            "emptyDir": {
+              "medium": "Memory"
+            }
+          },
+          {
+            "name": "vault-secrets",
+            "emptyDir": {
+              "medium": "Memory"
+            }
+          }
+        ],
+        "certificate": {
+          "ready": true,
+          "serial": "03B7E08A4F05BE9FE79AA938FF9E17190BC228EF",
+          "subject": "CN=demo.agent.test",
+          "issuer": "CN=Lifecycle Lab Mock TPP CA",
+          "sans": "DNS:demo.agent.test",
+          "fingerprint_sha256": "16:52:7F:75:97:19:56:B5:FD:C1:AC:0C:48:BC:C8:D7:16:8D:20:1C:71:02:A0:9B:44:59:68:CD:3A:99:EF:D5",
+          "public_key_sha256": "340d02e0253e7599db5b14f0e52b5d0dae722e74a252b5e369eb6132d135b149",
+          "pod_name": "demo-c777bbf64-zfxsc",
+          "experiment": "agent",
+          "storage": "Agent memory emptyDir; durable identity in Vault plugin storage",
+          "requested_duration_seconds": 3600,
+          "actual_duration_seconds": 720,
+          "not_before": 1789699162,
+          "not_after": 1789699882,
+          "midpoint": 1789699522,
+          "remaining_seconds": 569,
+          "observed_at": 1789699313,
+          "valid": true
+        },
+        "certificate_key_match": true
+      },
+      {
+        "name": "demo-c777bbf64-zxn4j",
+        "uid": "abd52582-ad8a-4cc9-a526-389e8ba73ef2",
+        "phase": "Running",
+        "containers": [
+          {
+            "name": "app",
+            "ready": true,
+            "restartCount": 0
+          },
+          {
+            "name": "vault-agent",
+            "ready": true,
+            "restartCount": 0
+          }
+        ],
+        "volumes": [
+          {
+            "name": "home-init",
+            "emptyDir": {
+              "medium": "Memory"
+            }
+          },
+          {
+            "name": "home-sidecar",
+            "emptyDir": {
+              "medium": "Memory"
+            }
+          },
+          {
+            "name": "vault-secrets",
+            "emptyDir": {
+              "medium": "Memory"
+            }
+          }
+        ],
+        "certificate": {
+          "ready": true,
+          "serial": "03B7E08A4F05BE9FE79AA938FF9E17190BC228EF",
+          "subject": "CN=demo.agent.test",
+          "issuer": "CN=Lifecycle Lab Mock TPP CA",
+          "sans": "DNS:demo.agent.test",
+          "fingerprint_sha256": "16:52:7F:75:97:19:56:B5:FD:C1:AC:0C:48:BC:C8:D7:16:8D:20:1C:71:02:A0:9B:44:59:68:CD:3A:99:EF:D5",
+          "public_key_sha256": "340d02e0253e7599db5b14f0e52b5d0dae722e74a252b5e369eb6132d135b149",
+          "pod_name": "demo-c777bbf64-zxn4j",
+          "experiment": "agent",
+          "storage": "Agent memory emptyDir; durable identity in Vault plugin storage",
+          "requested_duration_seconds": 3600,
+          "actual_duration_seconds": 720,
+          "not_before": 1789699162,
+          "not_after": 1789699882,
+          "midpoint": 1789699522,
+          "remaining_seconds": 567,
+          "observed_at": 1789699315,
+          "valid": true
+        },
+        "certificate_key_match": true
+      }
+    ],
+    "inventory": [
+      {
+        "kind": "configmaps",
+        "name": "kube-root-ca.crt",
+        "type": null,
+        "pem_fields": [
+          "ca.crt"
+        ]
+      }
+    ]
+  },
+  "counters_after": {
+    "exp1": {
+      "issuance": 5,
+      "retrieval": 5,
+      "auth": 5,
+      "policy": 5
+    },
+    "exp2": {
+      "issuance": 5,
+      "retrieval": 5,
+      "auth": 26,
+      "policy": 5
+    }
+  },
+  "recovery_errors": [],
+  "finished_at": "2026-09-18T02:41:55.818890+00:00",
+  "passed": true
+}
