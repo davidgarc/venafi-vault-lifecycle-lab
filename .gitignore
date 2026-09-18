@@ -1,0 +1,6 @@
+.state/
+.env
+*.key
+*.p12
+*.pfx
+artifacts/private/
