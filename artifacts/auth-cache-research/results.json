@@ -1,0 +1,485 @@
+{
+  "started_at": "2026-09-23T12:12:41.711577+00:00",
+  "cases": {
+    "seed_control": {
+      "ok": true,
+      "serial": "45:52:54:a6:db:4f:ae:61:7e:8e:fe:f5:01:e0:48:55:43:5b:8f:d2",
+      "certificate_sha256": "4d06ddd0e56b1dd458727f68691fd5a19f55bdd542e6fde09aa731c82d30c0fa",
+      "private_key_sha256": "6a51e62c56d346102808f7b934e5b8f47a76c6d373c5b6bda21ef5bcf12ecd13",
+      "seconds": 0.118,
+      "counter_delta": {
+        "exp2": {
+          "policy": 1,
+          "auth": 1,
+          "retrieval": 1,
+          "issuance": 1
+        }
+      }
+    },
+    "warm_positive_timeout": {
+      "ok": true,
+      "serial": "45:52:54:a6:db:4f:ae:61:7e:8e:fe:f5:01:e0:48:55:43:5b:8f:d2",
+      "certificate_sha256": "4d06ddd0e56b1dd458727f68691fd5a19f55bdd542e6fde09aa731c82d30c0fa",
+      "private_key_sha256": "6a51e62c56d346102808f7b934e5b8f47a76c6d373c5b6bda21ef5bcf12ecd13",
+      "seconds": 0.007,
+      "counter_delta": {
+        "exp2": {
+          "policy": 0,
+          "auth": 1,
+          "retrieval": 0,
+          "issuance": 0
+        }
+      }
+    },
+    "zero_with_explicit_bundle": {
+      "ok": false,
+      "http_status": 500,
+      "error": "{\"errors\":[\"1 error occurred:\\n\\t* rpc error: code = Unavailable desc = error reading from server: EOF\\n\\n\"]}\n",
+      "seconds": 0.054,
+      "counter_delta": {
+        "exp2": {
+          "policy": 0,
+          "auth": 0,
+          "retrieval": 0,
+          "issuance": 0
+        }
+      },
+      "nil_pointer_panic_observed": false
+    },
+    "warm_zero_system_trust": {
+      "ok": true,
+      "serial": "45:52:54:a6:db:4f:ae:61:7e:8e:fe:f5:01:e0:48:55:43:5b:8f:d2",
+      "certificate_sha256": "4d06ddd0e56b1dd458727f68691fd5a19f55bdd542e6fde09aa731c82d30c0fa",
+      "private_key_sha256": "6a51e62c56d346102808f7b934e5b8f47a76c6d373c5b6bda21ef5bcf12ecd13",
+      "seconds": 0.004,
+      "counter_delta": {
+        "exp2": {
+          "policy": 0,
+          "auth": 0,
+          "retrieval": 0,
+          "issuance": 0
+        }
+      }
+    },
+    "cold_zero_system_trust": {
+      "ok": true,
+      "serial": "29:fc:ca:a3:5c:70:f0:7b:31:64:56:f8:fd:e3:17:59:bc:7f:16:03",
+      "certificate_sha256": "51ca597d2867eb841c8e48665944d73dc9d676a94f19ddd61e64c76aaa41049a",
+      "private_key_sha256": "3d87be33b85907447be6187ba117ba6108ea551eb336c7aec3552083f6158493",
+      "seconds": 0.112,
+      "counter_delta": {
+        "exp2": {
+          "policy": 1,
+          "auth": 0,
+          "retrieval": 1,
+          "issuance": 1
+        }
+      }
+    },
+    "threshold_reissue_zero_system_trust": {
+      "ok": true,
+      "serial": "78:7c:ba:a0:de:cc:cd:e4:4d:bd:f4:a6:b2:34:27:8b:ed:03:45:dc",
+      "certificate_sha256": "93ae09a180154c2fb325f5643f5e1397d07819addd178f0b39f90d20dd282dea",
+      "private_key_sha256": "9b6ffbae2d047ecf6ca1343566ed7c1cf8632fffeeac74100e1ddf751fe8425c",
+      "seconds": 0.093,
+      "counter_delta": {
+        "exp2": {
+          "policy": 1,
+          "auth": 0,
+          "retrieval": 1,
+          "issuance": 1
+        }
+      }
+    },
+    "invalid_upstream_token_warm_cache": {
+      "ok": true,
+      "serial": "78:7c:ba:a0:de:cc:cd:e4:4d:bd:f4:a6:b2:34:27:8b:ed:03:45:dc",
+      "certificate_sha256": "93ae09a180154c2fb325f5643f5e1397d07819addd178f0b39f90d20dd282dea",
+      "private_key_sha256": "9b6ffbae2d047ecf6ca1343566ed7c1cf8632fffeeac74100e1ddf751fe8425c",
+      "seconds": 0.004,
+      "counter_delta": {
+        "exp2": {
+          "policy": 0,
+          "auth": 0,
+          "retrieval": 0,
+          "issuance": 0
+        }
+      }
+    },
+    "invalid_upstream_token_cold": {
+      "ok": false,
+      "http_status": 500,
+      "error": "{\"errors\":[\"1 error occurred:\\n\\t* could not read zone configuration: Invalid status: 401 Unauthorized Server response: {\\\"Error\\\": \\\"Invalid lab token\\\"}\\n\\n\"]}\n",
+      "seconds": 0.008,
+      "counter_delta": {
+        "exp2": {
+          "policy": 0,
+          "auth": 0,
+          "retrieval": 0,
+          "issuance": 0
+        }
+      }
+    },
+    "offline_positive_timeout": {
+      "ok": false,
+      "http_status": 500,
+      "error": "{\"errors\":[\"1 error occurred:\\n\\t* failed to get CyberArk issuer client: vcert error: your data contains problems: auth error: Get \\\"https://mock-tpp:8443/vedsdk/Identity/Self\\\": dial tcp 10.96.3.71:8443: connect: connection refused\\n\\n\"]}\n",
+      "seconds": 0.004
+    },
+    "offline_zero_system_trust": [
+      {
+        "ok": true,
+        "serial": "78:7c:ba:a0:de:cc:cd:e4:4d:bd:f4:a6:b2:34:27:8b:ed:03:45:dc",
+        "certificate_sha256": "93ae09a180154c2fb325f5643f5e1397d07819addd178f0b39f90d20dd282dea",
+        "private_key_sha256": "9b6ffbae2d047ecf6ca1343566ed7c1cf8632fffeeac74100e1ddf751fe8425c",
+        "seconds": 0.003
+      },
+      {
+        "ok": true,
+        "serial": "78:7c:ba:a0:de:cc:cd:e4:4d:bd:f4:a6:b2:34:27:8b:ed:03:45:dc",
+        "certificate_sha256": "93ae09a180154c2fb325f5643f5e1397d07819addd178f0b39f90d20dd282dea",
+        "private_key_sha256": "9b6ffbae2d047ecf6ca1343566ed7c1cf8632fffeeac74100e1ddf751fe8425c",
+        "seconds": 0.004
+      },
+      {
+        "ok": true,
+        "serial": "78:7c:ba:a0:de:cc:cd:e4:4d:bd:f4:a6:b2:34:27:8b:ed:03:45:dc",
+        "certificate_sha256": "93ae09a180154c2fb325f5643f5e1397d07819addd178f0b39f90d20dd282dea",
+        "private_key_sha256": "9b6ffbae2d047ecf6ca1343566ed7c1cf8632fffeeac74100e1ddf751fe8425c",
+        "seconds": 0.004
+      }
+    ]
+  },
+  "checks": {
+    "control_cache_hit_still_authenticates": true,
+    "zero_bundle_reproduces_failure": true,
+    "zero_warm_has_no_upstream_calls": true,
+    "zero_cold_issues_with_verified_tls": true,
+    "zero_threshold_can_reissue": true,
+    "cached_return_does_not_validate_upstream_token": true,
+    "cold_still_requires_valid_upstream_token": true,
+    "positive_timeout_fails_offline": true,
+    "zero_warm_succeeds_offline_three_times": true,
+    "three_fresh_pods_start_offline_with_cached_identity": true,
+    "no_application_tls_secret": true,
+    "no_upstream_operations_during_offline_pod_start": true
+  },
+  "initial_pods": {
+    "observed_at": "2026-09-23T12:12:43.966660+00:00",
+    "context": "kind-venafi-lab-agent",
+    "pods": [
+      {
+        "name": "demo-59ff75679b-b2m5f",
+        "uid": "de1737a1-ef3c-4b7c-9ec4-62f13052a6d1",
+        "phase": "Running",
+        "containers": [
+          {
+            "name": "app",
+            "ready": true,
+            "restartCount": 0
+          },
+          {
+            "name": "vault-agent",
+            "ready": true,
+            "restartCount": 0
+          }
+        ],
+        "volumes": [
+          {
+            "name": "home-init",
+            "emptyDir": {
+              "medium": "Memory"
+            }
+          },
+          {
+            "name": "home-sidecar",
+            "emptyDir": {
+              "medium": "Memory"
+            }
+          },
+          {
+            "name": "vault-secrets",
+            "emptyDir": {
+              "medium": "Memory"
+            }
+          }
+        ],
+        "certificate": {
+          "ready": true,
+          "serial": "69D51B49EFB562B8EE030C7CE1850D203DEBC737",
+          "subject": "CN=demo.agent.test",
+          "issuer": "CN=Lifecycle Lab Mock TPP CA",
+          "sans": "DNS:demo.agent.test",
+          "fingerprint_sha256": "97:3B:F6:5A:EC:9B:2D:72:BD:F2:4E:2A:1F:33:D6:F2:02:00:53:71:48:7E:58:80:2B:02:12:BB:FF:7F:E0:C9",
+          "public_key_sha256": "64ee2a434e212d37c06b6984057ebbc7a2180fb44a0a8bf11d354314eae672ac",
+          "pod_name": "demo-59ff75679b-b2m5f",
+          "experiment": "agent",
+          "storage": "Agent memory emptyDir; durable identity in Vault plugin storage",
+          "requested_duration_seconds": 3600,
+          "actual_duration_seconds": 720,
+          "not_before": 1790165468,
+          "not_after": 1790166188,
+          "midpoint": 1790165828,
+          "remaining_seconds": 625,
+          "observed_at": 1790165563,
+          "valid": true
+        },
+        "certificate_key_match": true
+      }
+    ],
+    "inventory": [
+      {
+        "kind": "configmaps",
+        "name": "kube-root-ca.crt",
+        "type": null,
+        "pem_fields": [
+          "ca.crt"
+        ]
+      }
+    ]
+  },
+  "roles": {
+    "control": {
+      "venafi_secret": "mock",
+      "ttl": 3600,
+      "max_ttl": 3600,
+      "generate_lease": false,
+      "store_by": "hash",
+      "store_pkey": true,
+      "no_store": false,
+      "min_cert_time_left": "6m",
+      "server_timeout": "3s"
+    },
+    "zero_bundle": {
+      "venafi_secret": "mock",
+      "ttl": 3600,
+      "max_ttl": 3600,
+      "generate_lease": false,
+      "store_by": "hash",
+      "store_pkey": true,
+      "no_store": false,
+      "min_cert_time_left": "6m",
+      "server_timeout": "0s"
+    },
+    "zero_system": {
+      "venafi_secret": "mock-system",
+      "ttl": 3600,
+      "max_ttl": 3600,
+      "generate_lease": false,
+      "store_by": "hash",
+      "store_pkey": true,
+      "no_store": false,
+      "min_cert_time_left": "6m",
+      "server_timeout": "0s"
+    }
+  },
+  "demo_cached_identity": {
+    "ok": true,
+    "serial": "69:d5:1b:49:ef:b5:62:b8:ee:03:0c:7c:e1:85:0d:20:3d:eb:c7:37",
+    "certificate_sha256": "9f5d394d9ce89fe132db7652bb97ac13c05a4c77f40c72ce1b074e9f1a4c736a",
+    "private_key_sha256": "8c03dc1d74445527899bba0885575c9502c96d77eb8ab7b90338f244e2b1dc12",
+    "seconds": 0.004
+  },
+  "mock_offline_desired_replicas": 0,
+  "offline_fresh_injected_pods": {
+    "observed_at": "2026-09-23T12:13:57.267462+00:00",
+    "context": "kind-venafi-lab-agent",
+    "pods": [
+      {
+        "name": "demo-59ff75679b-b6f7c",
+        "uid": "e915dfd2-b673-462d-82ed-f06949e3e9e3",
+        "phase": "Running",
+        "containers": [
+          {
+            "name": "app",
+            "ready": true,
+            "restartCount": 0
+          },
+          {
+            "name": "vault-agent",
+            "ready": true,
+            "restartCount": 0
+          }
+        ],
+        "volumes": [
+          {
+            "name": "home-init",
+            "emptyDir": {
+              "medium": "Memory"
+            }
+          },
+          {
+            "name": "home-sidecar",
+            "emptyDir": {
+              "medium": "Memory"
+            }
+          },
+          {
+            "name": "vault-secrets",
+            "emptyDir": {
+              "medium": "Memory"
+            }
+          }
+        ],
+        "certificate": {
+          "ready": true,
+          "serial": "69D51B49EFB562B8EE030C7CE1850D203DEBC737",
+          "subject": "CN=demo.agent.test",
+          "issuer": "CN=Lifecycle Lab Mock TPP CA",
+          "sans": "DNS:demo.agent.test",
+          "fingerprint_sha256": "97:3B:F6:5A:EC:9B:2D:72:BD:F2:4E:2A:1F:33:D6:F2:02:00:53:71:48:7E:58:80:2B:02:12:BB:FF:7F:E0:C9",
+          "public_key_sha256": "64ee2a434e212d37c06b6984057ebbc7a2180fb44a0a8bf11d354314eae672ac",
+          "pod_name": "demo-59ff75679b-b6f7c",
+          "experiment": "agent",
+          "storage": "Agent memory emptyDir; durable identity in Vault plugin storage",
+          "requested_duration_seconds": 3600,
+          "actual_duration_seconds": 720,
+          "not_before": 1790165468,
+          "not_after": 1790166188,
+          "midpoint": 1790165828,
+          "remaining_seconds": 555,
+          "observed_at": 1790165633,
+          "valid": true
+        },
+        "certificate_key_match": true
+      },
+      {
+        "name": "demo-59ff75679b-j9q49",
+        "uid": "8e6b9967-d88b-4828-a594-353e028abff4",
+        "phase": "Running",
+        "containers": [
+          {
+            "name": "app",
+            "ready": true,
+            "restartCount": 0
+          },
+          {
+            "name": "vault-agent",
+            "ready": true,
+            "restartCount": 0
+          }
+        ],
+        "volumes": [
+          {
+            "name": "home-init",
+            "emptyDir": {
+              "medium": "Memory"
+            }
+          },
+          {
+            "name": "home-sidecar",
+            "emptyDir": {
+              "medium": "Memory"
+            }
+          },
+          {
+            "name": "vault-secrets",
+            "emptyDir": {
+              "medium": "Memory"
+            }
+          }
+        ],
+        "certificate": {
+          "ready": true,
+          "serial": "69D51B49EFB562B8EE030C7CE1850D203DEBC737",
+          "subject": "CN=demo.agent.test",
+          "issuer": "CN=Lifecycle Lab Mock TPP CA",
+          "sans": "DNS:demo.agent.test",
+          "fingerprint_sha256": "97:3B:F6:5A:EC:9B:2D:72:BD:F2:4E:2A:1F:33:D6:F2:02:00:53:71:48:7E:58:80:2B:02:12:BB:FF:7F:E0:C9",
+          "public_key_sha256": "64ee2a434e212d37c06b6984057ebbc7a2180fb44a0a8bf11d354314eae672ac",
+          "pod_name": "demo-59ff75679b-j9q49",
+          "experiment": "agent",
+          "storage": "Agent memory emptyDir; durable identity in Vault plugin storage",
+          "requested_duration_seconds": 3600,
+          "actual_duration_seconds": 720,
+          "not_before": 1790165468,
+          "not_after": 1790166188,
+          "midpoint": 1790165828,
+          "remaining_seconds": 553,
+          "observed_at": 1790165635,
+          "valid": true
+        },
+        "certificate_key_match": true
+      },
+      {
+        "name": "demo-59ff75679b-sbfs9",
+        "uid": "65e7c537-0816-4040-b7f8-d661014a84e8",
+        "phase": "Running",
+        "containers": [
+          {
+            "name": "app",
+            "ready": true,
+            "restartCount": 0
+          },
+          {
+            "name": "vault-agent",
+            "ready": true,
+            "restartCount": 0
+          }
+        ],
+        "volumes": [
+          {
+            "name": "home-init",
+            "emptyDir": {
+              "medium": "Memory"
+            }
+          },
+          {
+            "name": "home-sidecar",
+            "emptyDir": {
+              "medium": "Memory"
+            }
+          },
+          {
+            "name": "vault-secrets",
+            "emptyDir": {
+              "medium": "Memory"
+            }
+          }
+        ],
+        "certificate": {
+          "ready": true,
+          "serial": "69D51B49EFB562B8EE030C7CE1850D203DEBC737",
+          "subject": "CN=demo.agent.test",
+          "issuer": "CN=Lifecycle Lab Mock TPP CA",
+          "sans": "DNS:demo.agent.test",
+          "fingerprint_sha256": "97:3B:F6:5A:EC:9B:2D:72:BD:F2:4E:2A:1F:33:D6:F2:02:00:53:71:48:7E:58:80:2B:02:12:BB:FF:7F:E0:C9",
+          "public_key_sha256": "64ee2a434e212d37c06b6984057ebbc7a2180fb44a0a8bf11d354314eae672ac",
+          "pod_name": "demo-59ff75679b-sbfs9",
+          "experiment": "agent",
+          "storage": "Agent memory emptyDir; durable identity in Vault plugin storage",
+          "requested_duration_seconds": 3600,
+          "actual_duration_seconds": 720,
+          "not_before": 1790165468,
+          "not_after": 1790166188,
+          "midpoint": 1790165828,
+          "remaining_seconds": 552,
+          "observed_at": 1790165636,
+          "valid": true
+        },
+        "certificate_key_match": true
+      }
+    ],
+    "inventory": [
+      {
+        "kind": "configmaps",
+        "name": "kube-root-ca.crt",
+        "type": null,
+        "pem_fields": [
+          "ca.crt"
+        ]
+      }
+    ]
+  },
+  "offline_counter_delta_after_restore": {
+    "exp2": {
+      "policy": 0,
+      "auth": 0,
+      "retrieval": 0,
+      "issuance": 0
+    }
+  },
+  "finished_at": "2026-09-23T12:14:34.371814+00:00",
+  "passed": true,
+  "assertion_note": "The initial bundle-failure assertion additionally required a panic stack in Vault logs. Vault exposed HTTP 500/RPC termination but no panic text. Corrected the assertion to that observed failure; the nil dereference is established by source inspection, not a captured stack."
+}

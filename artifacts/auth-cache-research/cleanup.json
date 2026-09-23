@@ -1,0 +1,16 @@
+{
+  "observed_at": "2026-09-23T12:16:35.418198+00:00",
+  "remaining_containers": [
+    "kind-control-plane",
+    "kind-registry"
+  ],
+  "ports_closed": {
+    "18080": true,
+    "18081": true,
+    "18082": true,
+    "18200": true,
+    "18201": true
+  },
+  "state_files_remaining": [],
+  "passed": true
+}

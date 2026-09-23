@@ -1,0 +1,33 @@
+{
+  "started_at": "2026-09-23T12:14:46.107833+00:00",
+  "fixture": "First retrieval of each certificate returns HTTP 200 with empty CertificateData; next retrieval returns certificate.",
+  "positive_timeout": {
+    "ok": true,
+    "serial": "4c:6f:9a:a8:1d:ef:fb:e4:91:f8:cc:56:5b:6d:f8:bd:f7:1f:2c:ea",
+    "seconds": 2.088,
+    "counter_delta": {
+      "issuance": 1,
+      "auth": 1,
+      "retrieval": 2,
+      "policy": 1
+    }
+  },
+  "zero_timeout": {
+    "ok": false,
+    "status": 500,
+    "error": "{\"errors\":[\"1 error occurred:\\n\\t* Issuance is pending. You may try retrieving the certificate later using Pickup ID: \\\\VED\\\\Policy\\\\agent\\\\d66fa06f9df48d3a4ce63583fa213c51d709ff7\\n\\tStatus: Pending - research fixture\\n\\n\"]}\n",
+    "seconds": 0.098,
+    "counter_delta": {
+      "issuance": 1,
+      "auth": 0,
+      "retrieval": 1,
+      "policy": 1
+    }
+  },
+  "checks": {
+    "positive_timeout_polls_and_succeeds": true,
+    "zero_timeout_returns_pending_after_one_pickup": true
+  },
+  "finished_at": "2026-09-23T12:15:54.316831+00:00",
+  "passed": true
+}

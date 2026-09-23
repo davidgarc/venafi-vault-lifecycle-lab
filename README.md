@@ -4,6 +4,8 @@ Compare **cert-manager** and **HashiCorp Vault Agent Injector** using the unmodi
 
 **Measured result:** cert-manager passed both natural midpoint renewals. Agent cache/restart reuse passed, but one of three Agent replicas skipped the second midpoint update and recovered at the next boundary. Experiment 2 therefore does not fully meet the requested lifecycle behavior with these pinned tools. Both experiments also passed clean recreation and final cleanup; the validation environment is stopped. See [results](docs/RESULTS.md).
 
+**September 23 clarification:** the default configuration's TPP dependency for cached delivery is avoidable under specific settings. A tested zero-timeout/system-trust workaround started three fresh Agent pods with TPP offline, but also changed pending-certificate pickup behavior. See [configuration research and tradeoffs](docs/AUTH_CACHE_CONFIGURATION.md).
+
 No custom renewal controller or patched plugin is involved. The simulator, UI, setup scripts and tests make existing tool behavior visible. This lab does not certify compatibility with a deployed Venafi TPP server.
 
 ## Start and view

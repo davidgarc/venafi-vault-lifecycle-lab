@@ -39,6 +39,8 @@ The stale bundle was verified in both app and Agent containers with the same ino
 
 ## Native Agent limitations
 
+**Scope clarification (September 23):** the authentication dependency below describes the original positive-timeout configuration. Subsequent testing verified a configuration-only bypass using zero timeout, system trust and access-token authentication, including fresh-pod startup with TPP offline. It has issuance tradeoffs; see [the configuration research](AUTH_CACHE_CONFIGURATION.md).
+
 The warm-cache test recorded zero issuance/retrieval/policy calls and three authentication calls for three new pods. Vault-local certificate caching does **not** mean the entire request is independent of TPP availability.
 
 `min_cert_time_left` is a duration. Setting it to six minutes produces the desired midpoint for a fixed twelve-minute issuer policy. This is not a universal percentage-based cache policy for arbitrary variable lifetimes.
